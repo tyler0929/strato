@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { Text_14_600 } from "../typography/Typography"
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React from 'react'
 import { LanguageIcon, SettingIcon } from "../icons";
 

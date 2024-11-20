@@ -1,5 +1,5 @@
-import { LiquidityIcon, SwapIcon } from "@/components/icons";
-import SideBarSwapPage, { IPropsSideBar } from "@/components/Swap/SideBar";
+
+import SideBarSwapPage from "@/components/Swap/SideBar";
 import SwapLinks from "@/components/Swap/SwapLinks";
 import { Text_14_400, Text_20_600 } from "@/components/typography/Typography";
 
