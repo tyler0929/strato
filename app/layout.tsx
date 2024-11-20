@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import WebHeader from "@/components/header/WebHeader";
+import { SwapProvider } from "@/components/context/SwapContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +21,12 @@ export default function RootLayout({
         <div className="section-header">
           <WebHeader />
         </div>
-        <div className="section-content max_width_app pt-24 px-10">{children}</div>
+        <div className="section-content max_width_app pt-24 px-10">
+          <SwapProvider>
+
+          {children}
+          </SwapProvider>
+          </div>
         <div className="section-footer"></div>
       </body>
     </html>

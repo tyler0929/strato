@@ -1,3 +1,10 @@
+const Text_16_600 = ({ text, style }: { text: string; style?: string }) => {
+  return (
+    <p className={`${style} font-PSemiBold font-[600] text-[16px] text-white`}>
+      {text}
+    </p>
+  );
+};
 const Text_14_600 = ({ text, style }: { text: string; style?: string }) => {
   return (
     <p className={`${style} font-PSemiBold font-[600] text-[14px] text-white`}>
@@ -20,4 +27,5 @@ const Text_14_400 = ({ text, style }: { text: string; style?: string }) => {
   );
 };
 
-export { Text_14_600 , Text_20_600 , Text_14_400};
+
+export { Text_14_600 , Text_20_600 , Text_14_400 , Text_16_600};
