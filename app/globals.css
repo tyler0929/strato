@@ -2,20 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+@font-face {
+  font-family:PExtraBold ;
+  src: url('/fonts/PlusJakartaSans-ExtraBold.ttf'), format("ttf");
+}
+@font-face {
+  font-family:PBold ;
+  src: url('/fonts/PlusJakartaSans-Bold.ttf'), format("ttf");
+}
+@font-face {
+  font-family:PSemiBold ;
+  src: url('/fonts/PlusJakartaSans-SemiBold.ttf'), format("ttf");
+}
+@font-face {
+  font-family:PMedium ;
+  src: url('/fonts/PlusJakartaSans-Medium.ttf'), format("ttf");
+}
+@font-face {
+  font-family:PRegular;
+  src: url('/fonts/PlusJakartaSans-Regular.ttf'), format("ttf");
+}
+@font-face {
+  font-family:PLight;
+  src: url('/fonts/PlusJakartaSans-Light.ttf'), format("ttf");
+}
+@font-face {
+  font-family:PExtraLight;
+  src: url('/fonts/PlusJakartaSans-ExtraLight.ttf'), format("ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.max_width_app {
+  max-width: 1800px;
+  margin: auto;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
