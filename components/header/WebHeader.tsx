@@ -31,10 +31,16 @@ const WebHeader:React.FC = () => {
                         </Link>
                     </nav>
                 </div>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center ">
+                    <div className="text-white hover:opacity-70 transition-all duration-200 ease-linear">
+
                     <LanguageIcon />
+                    </div>
+                    <div className="text-white hover:opacity-70 transition-all duration-200 ease-linear">
+
                     <SettingIcon />
-                    <button className="rounded-full text-[16px] font-[600] text-white border border-primary-main px-7 py-3">Connect Wallet</button>
+                    </div>
+                    <button className="rounded-full text-[16px] font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">Connect Wallet</button>
                 </div>
             </div>
         </header>
