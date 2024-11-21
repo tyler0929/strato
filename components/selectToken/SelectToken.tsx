@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRightIcon, ArrowSelect } from "../icons";
+import { ArrowRightIcon, ArrowSelect, CopyIcon } from "../icons";
 import { Text_14_400, Text_16_600 } from "../typography/Typography";
 import { useState } from "react";
 import ModalComponent from "../modal/Modal";
@@ -47,7 +47,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
     setShowManageToken(!showManageToken)
   }
   return (
-    <div className="">
+    <div className="flex gap-2 items-center">
       <div
         onClick={handleOpenModal}
         className="flex w-fit text-white gap-2 h-5 items-center hover:opacity-70 transition-all duration-200 ease-linear cursor-pointer"
@@ -63,6 +63,9 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
         />
         <ArrowSelect width="30px" />
       </div>
+        <div className="hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
+        <CopyIcon width={"15px"}/>
+        </div>
       {/* Modal */}
       <ModalComponent
         title={ showManageToken ? "Manage" : "Select Token"}

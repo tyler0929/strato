@@ -13,6 +13,7 @@ import SwapCircle from './swapCircle'
 import EditIcon from "./edit"
 import TooltipIcon from "./tooltip"
 import CircleArrow from './circleArrow'
+import CopyIcon from "./copy"
 
 export {
   LanguageIcon,
@@ -29,5 +30,6 @@ export {
   SwapCircle,
   EditIcon,
   TooltipIcon,
-  CircleArrow
+  CircleArrow,
+  CopyIcon
 };
