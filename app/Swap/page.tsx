@@ -3,6 +3,7 @@ import ConnectWallet from "@/components/connectWallet/connectWallet";
 import { useSwapContext } from "@/components/context/SwapContext";
 import { SwapCircle } from "@/components/icons";
 import SelectToken from "@/components/selectToken/SelectToken";
+import SettingComponent from "@/components/setting/setting";
 import SideBarSwapPage from "@/components/Swap/SideBar";
 import SwapLinks from "@/components/Swap/SwapLinks";
 import { Text_14_400, Text_20_600 } from "@/components/typography/Typography";
@@ -56,6 +57,9 @@ const SwapPage: React.FC = () => {
               placeholder="0.0"
               className="bg-black-light2 text-end mb-4 rounded-lg font-[500] font-PRegular text-white text-[35px] h-12 outline-0 px-4 w-full border-none"
             />
+          </div>
+          <div className="py-4">
+            <SettingComponent baseComponent="SwapSetting" />
           </div>
         <div className="grid mt-3 ">
             <ConnectWallet />

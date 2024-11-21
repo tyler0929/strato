@@ -10,6 +10,9 @@ import CloseIcon from "./close"
 import ArrowRightIcon from './arrowRight'
 import ArrowLeftIcon from './arrowLeft'
 import SwapCircle from './swapCircle'
+import EditIcon from "./edit"
+import TooltipIcon from "./tooltip"
+import CircleArrow from './circleArrow'
 
 export {
   LanguageIcon,
@@ -23,5 +26,8 @@ export {
   CloseIcon,
   ArrowRightIcon,
   ArrowLeftIcon,
-  SwapCircle
+  SwapCircle,
+  EditIcon,
+  TooltipIcon,
+  CircleArrow
 };

@@ -8,7 +8,9 @@ interface IPropsModal {
   children: ReactNode;
   Footer?: ReactNode;
   isBack?: boolean;
-  backFunction?:() => void
+  backFunction?:() => void,
+  styleHeader?:string,
+  width?:string
 }
 
 const ModalComponent: React.FC<IPropsModal> = ({
@@ -18,7 +20,9 @@ const ModalComponent: React.FC<IPropsModal> = ({
   children,
   Footer,
   isBack,
-  backFunction
+  backFunction,
+  styleHeader,
+  width
 }) => {
 
   const handleBackFunction = () => {
@@ -32,10 +36,10 @@ const ModalComponent: React.FC<IPropsModal> = ({
           onClick={onOpen}
         >
           <div
-            className="bg-black-light1 rounded-lg shadow-lg max-w-md w-full p-6 animate-fade-in px-7 z-10"
+            className={`bg-black-light1 rounded-lg shadow-lg max-w-md w-full  animate-fade-in  z-10  ${width}`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between pt-2">
+            <div className={`${styleHeader} flex justify-between  p-6 px-7 rounded-t-lg`}>
               <div className="flex justify-start gap-4 items-center">
                 {isBack && (
                   <div
@@ -54,7 +58,7 @@ const ModalComponent: React.FC<IPropsModal> = ({
                 <CloseIcon width={"20px"} />
               </div>
             </div>
-            <div>{children}</div>
+            <div className="p-6 px-7">{children}</div>
 
             <div className="mt-6 flex justify-end">{Footer}</div>
           </div>

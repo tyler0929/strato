@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import { DolarIcon, FarmIcon, HistoryTransictionIcon, SettingIcon, SwapIcon } from "../icons";
+import { CircleArrow, DolarIcon, FarmIcon, HistoryTransictionIcon, SettingIcon, SwapIcon } from "../icons";
 
 type RouterData = {
   Icon: ReactNode;
@@ -27,6 +27,10 @@ const RouteData: RouterData[] = [
   {
     Icon: <HistoryTransictionIcon />,
     link: "#idFour",
+  },
+  {
+    Icon: <CircleArrow width={"22px"} />,
+    link: "#idFive",
   },
 ];
 const SwapLinks = () => {

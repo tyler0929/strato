@@ -7,7 +7,6 @@ import { LanguageIcon, SettingIcon } from "../icons";
 
 const WebHeader:React.FC = () => {
     const pathname = usePathname(); 
-    console.log("router" ,pathname)
     return(
         <header className="header-content top-0 w-full fixed">
             <div className="header-content-mobile"></div>

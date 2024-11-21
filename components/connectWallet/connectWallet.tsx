@@ -30,23 +30,23 @@ const ConnectWallet = () => {
             anyone.
           </p>
           <div className="grid grid-cols-3 gap-y-10 justify-around">
-            <div className="flex flex-col items-center gap-1 justify-center max-w-24 ">
+            <div className="flex flex-col items-center gap-1 justify-center max-w-24  hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={Metamask} alt="Metamask" width={55}/>
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">Metamask</p>
             </div>
-            <div className="flex flex-col items-center gap-1 justify-center max-w-24">
+            <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={Binance} alt="Metamask" width={55}/>
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">Binance Wallet</p>
             </div>
-            <div className="flex flex-col items-center gap-1 justify-center max-w-24">
+            <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={BinanceW3w} alt="Metamask" width={55}/>
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">Binance Web3 Wallet</p>
             </div>
-            <div className="flex flex-col items-center gap-1 justify-center max-w-24">
+            <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={Coinbase} alt="Metamask" width={55}/>
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">Coinbase</p>
             </div>
-            <div className="flex flex-col items-center gap-1 justify-center max-w-24">
+            <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={Trust} alt="Metamask" width={55}/>
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">Trust Wallet</p>
             </div>
