@@ -14,7 +14,7 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({ checked, onChange, labe
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="sr-only peer"
+        className="sr-only peer focus:ring-1 focus:ring-[#7645d9] focus:ring-offset-4 focus:ring-offset-[rgba(118,69,217,0.6)] focus:outline-none"
       />
 
       {/* Custom Checkbox */}

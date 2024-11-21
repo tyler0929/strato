@@ -27,7 +27,7 @@ const SideBarSwapPage = () => {
         {sidebarData?.map((item) => <Link
         key={item?.text}
         href={`/${item?.text}`}
-        className={`h-10 flex justify-start text-white gap-3 items-center px-4 rounded-lg hover:bg-black-light1 ${pathname === "/"+item?.text ? "bg-primary-main" : ""} `}
+        className={`h-10 flex justify-start text-white gap-3 items-center transition-all duration-200 ease-linear px-4 rounded-lg hover:bg-black-light1 ${pathname === "/"+item?.text ? "bg-primary-main" : ""} `}
       >
        {item?.Icon}
         <Text_14_600

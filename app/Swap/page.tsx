@@ -37,11 +37,11 @@ const SwapPage: React.FC = () => {
           <div className="bg-black-light2 px-6 py-4 pt-6 mt-4 rounded-lg">
             <SelectToken baseComponent="inputCurrency" />
             <div className="flex justify-end py-5">
-              <p className="text-white opacity-65">~1,673.14 USD</p>
+              <p className="text-white opacity-65 text-[12px] font-[400]">~1,673.14 USD</p>
             </div>
             <input
               placeholder="0.0"
-              className="bg-black-light2 text-end mb-4 rounded-lg font-[500] font-PLight text-[#f4eeff] text-[40px] h-12 outline-0 w-full border-none"
+              className="bg-black-light2 text-end mb-4 rounded-lg font-[500]  text-[#f4eeff] text-[40px] h-12 outline-0 w-full border-none"
             />
           </div>
 
@@ -56,21 +56,21 @@ const SwapPage: React.FC = () => {
             </div>
             <SelectToken baseComponent="outputCurrency" />
             <div className="flex justify-end py-5">
-              <p className="text-white opacity-65">~1,673.14 USD</p>
+              <p className="text-white opacity-65 text-[12px] font-[400]">~1,673.14 USD</p>
             </div>
             <input
               placeholder="0.0"
-              className="bg-black-light2 text-end mb-4 rounded-lg font-[500] font-PLight text-[#f4eeff] text-[40px] h-12 outline-0  w-full border-none"
+              className="bg-black-light2 text-end mb-4 rounded-lg font-[500]  text-[#f4eeff] text-[40px] h-12 outline-0  w-full border-none"
             />
           </div>
           <div className="flex justify-end mt-2">
             <Tooltip content="Although no obvious risk is found in the address, it is not guaranteed that there is 100% no risk for the address as the project can still fail or the token price can go down under natural market forces.">
-              <button className="flex  items-center bg-primary-main font-[600] text-[14px] font-PRegular gap-1 py-1 px-2 rounded-full">
+              <button className="flex  items-center bg-primary-main font-[600] text-[14px]  gap-1 py-1 px-2 rounded-full">
                 Same Risk <TooltipIcon width="15px" />
               </button>
             </Tooltip>
           </div>
-          <div className="py-4">
+          <div className="py-2">
             <SettingComponent baseComponent="SwapSetting" />
           </div>
           <div className="grid mt-3 ">

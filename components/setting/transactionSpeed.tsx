@@ -6,7 +6,7 @@ const TransactionSpeed = () => {
     const handleClickButton = (event:React.MouseEvent) =>{
         setSelectedButton(event?.currentTarget?.id)
     }
-    return<div className="flex gap-3 my-5">
+    return<div className="flex justify-between my-5">
         <SettingButton text="Default" onClick={handleClickButton}  selected={selectedButton}/>
         <SettingButton text="Standard (3)" onClick={handleClickButton}  selected={selectedButton}/>
         <SettingButton text="Fast (4)" onClick={handleClickButton}  selected={selectedButton}/>

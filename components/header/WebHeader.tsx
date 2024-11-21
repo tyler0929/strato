@@ -4,7 +4,7 @@ import { Text_14_600 } from "../typography/Typography";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { LanguageIcon, SettingIcon } from "../icons";
-import SettingComponent from "../setting/setting";
+import SettingComponentHeader from "../setting/SettingHeader";
 
 const WebHeader: React.FC = () => {
   const pathname = usePathname();
@@ -79,7 +79,7 @@ const WebHeader: React.FC = () => {
           </div>
          
           <div className="text-white z-50 ">
-            <SettingComponent baseComponent="HeaderSetting" />
+            <SettingComponentHeader  />
           </div>
           <button className="rounded-full text-[16px] font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
             Connect Wallet

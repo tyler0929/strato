@@ -35,9 +35,9 @@ const SettingSwitch: React.FC<SwitchProps> = ({
         
           {/* Circle */}
           <div
-            className={`w-5 h-5 bg-black-main rounded-full shadow-md transform transition-transform ${
+            className={`w-5 h-5 bg-black-main rounded-full shadow-md transform transition-transform hover:shadow-[0px_2px_2px_-1px rgba(74, 74, 104, .1)]  ${
               isOn ? "translate-x-6" : "translate-x-1"
-            }`}
+            } `}
           ></div>
         </div>}
         {
@@ -59,3 +59,4 @@ const SettingSwitch: React.FC<SwitchProps> = ({
 };
 
 export default SettingSwitch;
+// hover:ring-1 hover:ring-[#7645d9] hover:ring-offset-2 hover:ring-offset-[rgba(118,69,217,0.6)] hover:outline-none

@@ -44,9 +44,9 @@ const RouteData: RouterData[] = [
 const SwapLinks = () => {
   return (
     <div className="flex gap-3">
-      <div className="text-white  transition-all duration-200 ease-linear">
+      <Link  href={"/Buy-crypto"} className="text-white hover:opacity-65  transition-all duration-200 ease-linear">
         <DolarIcon />
-      </div>
+      </Link>
       <div className="text-white hover:opacity-65 transition-all duration-200 ease-linear">
         <SwapIcon />
       </div>

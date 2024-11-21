@@ -7,10 +7,13 @@ import { Token, useSwapContext } from "../context/SwapContext";
 import ManageToken from "./manateToken";
 
 interface IPropsSelectToken {
-  baseComponent: "inputCurrency" | "outputCurrency";
+  baseComponent: "inputCurrency" | "outputCurrency" ;
+  buyCrypto?:boolean,
+
 }
 const SelectToken: React.FC<IPropsSelectToken> = ({
   baseComponent = "inputCurrency",
+  buyCrypto = false
 }) => {
   const {
     tokens,
@@ -63,9 +66,9 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
         />
         <ArrowSelect width="30px" />
       </div>
-        <div className="hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
+       { !buyCrypto && <div className="hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
         <CopyIcon width={"15px"}/>
-        </div>
+        </div>}
       {/* Modal */}
       <ModalComponent
         title={ showManageToken ? "Manage" : "Select Token"}
@@ -144,7 +147,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
           </div>
           <div className="h-40"></div>
         </div>}
-        {showManageToken && <div className="manage-token mt-10 px-7">
+        {showManageToken && !buyCrypto && <div className="manage-token mt-10 px-7">
           <ManageToken />
         </div>}
       </ModalComponent>

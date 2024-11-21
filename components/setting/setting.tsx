@@ -27,19 +27,19 @@ const SettingComponent: React.FC<IPropsSetting> = ({
   return (
     <div>
       {baseComponent === "SwapSetting" && (
-        <div className=" flex justify-between items-center">
+        <div className=" flex justify-between items-center px-5">
           <div className="flex gap-4">
-            <p className="text-white font-[600] font-PLight text-[12px]">
+            <p className="text-white font-[600]  text-[12px]">
               Slippage Tolerance
             </p>
             <div
               onClick={handleOpenModal}
               className="hover:opacity-65 text-primary-main cursor-pointer transition-all duration-200 ease-linear"
             >
-              <EditIcon width={"15px"} />
+              <EditIcon width={"11px"} />
             </div>
           </div>
-          <p className="text-primary-main ">1%</p>
+          <p className="text-primary-main font-[600]  text-[12px] ">0.5%</p>
         </div>
       )}
       {baseComponent === "HeaderSetting" && (

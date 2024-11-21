@@ -30,6 +30,9 @@ export default {
         PRegular:"PRegular",
         PLight:"PLight",
         PExtraLight:"PExtraLight",
+      },
+      boxShadow:{
+        shadowsFocus:" 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, .6)"
       }
     },
   },
