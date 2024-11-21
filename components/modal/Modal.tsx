@@ -10,7 +10,8 @@ interface IPropsModal {
   isBack?: boolean;
   backFunction?:() => void,
   styleHeader?:string,
-  width?:string
+  width?:string,
+  paddingContent?:string
 }
 
 const ModalComponent: React.FC<IPropsModal> = ({
@@ -22,7 +23,8 @@ const ModalComponent: React.FC<IPropsModal> = ({
   isBack,
   backFunction,
   styleHeader,
-  width
+  width,
+  paddingContent
 }) => {
 
   const handleBackFunction = () => {
@@ -32,11 +34,11 @@ const ModalComponent: React.FC<IPropsModal> = ({
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-65"
+          className="fixed modal-backdrop inset-0 z-[999] flex items-center justify-center bg-white bg-opacity-65"
           onClick={onOpen}
         >
           <div
-            className={`bg-black-light1 rounded-lg shadow-lg max-w-md w-full  animate-fade-in  z-10  ${width}`}
+            className={`modal-content bg-black-light1 rounded-lg shadow-lg max-w-md w-full  animate-fade-in  z-[1000]  ${width}`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className={`${styleHeader} flex justify-between  p-6 px-7 rounded-t-lg`}>
@@ -58,7 +60,7 @@ const ModalComponent: React.FC<IPropsModal> = ({
                 <CloseIcon width={"20px"} />
               </div>
             </div>
-            <div className="p-6 px-7">{children}</div>
+            <div className={ paddingContent || `px-7`}>{children}</div>
 
             <div className="mt-6 flex justify-end">{Footer}</div>
           </div>

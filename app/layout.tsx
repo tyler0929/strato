@@ -23,7 +23,6 @@ export default function RootLayout({
         </div>
         <div className="section-content max_width_app pt-24 px-10">
           <SwapProvider>
-
           {children}
           </SwapProvider>
           </div>

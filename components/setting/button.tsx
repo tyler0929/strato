@@ -11,7 +11,7 @@ const SettingButton: React.FC<IPropsButton> = ({ text, onClick, selected }) => {
       id={text}
       className={`${
         selected === text ? " bg-primary-main" : "bg-black-light2"
-      } text-white font-PBold  font-[600] text-[16px] rounded-lg px-5 py-2 cursor-pointer hover:opacity-65 transition-all duration-200 ease-linear`}
+      } text-white font-PBold  font-[600] text-[16px] rounded-lg px-[1.39rem] py-2 cursor-pointer hover:opacity-65 transition-all duration-200 ease-linear`}
     >
       {text}
     </button>

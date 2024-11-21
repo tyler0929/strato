@@ -72,22 +72,26 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
         isOpen={isOpen}
         isBack={showManageToken}
         onOpen={handleOpenModal}
+        paddingContent="0px"
         backFunction={()=> setShowManageToken(false)}
         Footer={
           !showManageToken && <button 
           onClick={handleShowManageToken}
-          className="m-auto font-PBold font-[600] text-[16px] text-primary-main hover:opacity-65 transition-all duration-200 ease-linear">
+          className="m-auto py-5 font-PBold font-[600] text-[16px] text-primary-main hover:opacity-65 transition-all duration-200 ease-linear">
             Manage Tokens
           </button>
         }
       >
-        {!showManageToken && <div className="mt-10">
+        {!showManageToken && <div className="mt-10 ">
+          <div className="px-7">
+
           <input
             placeholder="Search name or paste address"
             className="bg-black-light2 mb-4 rounded-lg text-gray-gray1 text-[16px] h-12 outline-0 px-4 w-full border-none"
           />
           <Text_14_400 text="Common tokens" />
-          <div className=" flex gap-5 mt-4">
+          </div>
+          <div className=" flex gap-5 mt-4 px-7">
             {tokens?.map((item: Token) => {
               if (item.id === "3") return;
               return (
@@ -117,7 +121,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
                   key={item?.id}
                   id={item?.id}
                   onClick={handleSelectToken}
-                  className={`flex gap-2  rounded-lg px-3 py-1 items-center ${
+                  className={`flex gap-2  rounded-lg px-7 py-1 items-center ${
                     inputCurrency?.id === item?.id ||
                     outputCurrency?.id === item?.id
                       ? "opacity-55"
@@ -140,7 +144,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
           </div>
           <div className="h-40"></div>
         </div>}
-        {showManageToken && <div className="manage-token mt-10">
+        {showManageToken && <div className="manage-token mt-10 px-7">
           <ManageToken />
         </div>}
       </ModalComponent>

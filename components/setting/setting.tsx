@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { EditIcon } from "../icons";
+import { EditIcon, SettingIcon } from "../icons";
 import ModalComponent from "../modal/Modal";
 import { Text_16_400, Text_16_600 } from "../typography/Typography";
 import Tooltip from "../Tooltip/Tooltip";
@@ -42,7 +42,14 @@ const SettingComponent: React.FC<IPropsSetting> = ({
           <p className="text-primary-main ">1%</p>
         </div>
       )}
-
+      {baseComponent === "HeaderSetting" && (
+        <div
+          onClick={handleOpenModal}
+          className="cursor-pointer hover:opacity-65 transition-all duration-200 ease-linear "
+        >
+          <SettingIcon />
+        </div>
+      )}
       <ModalComponent
         title="Settings"
         isOpen={isOpen}
@@ -51,7 +58,7 @@ const SettingComponent: React.FC<IPropsSetting> = ({
         width="max-w-xl"
         Footer={<CustomizeRouting />}
       >
-        <div>
+        <div className="py-7 ">
           <Text_16_600 text="Swaps & Liquidity" />
           <div className="flex items-center gap-2">
             <Text_16_400

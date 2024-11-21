@@ -38,3 +38,19 @@
   margin: auto;
 }
 
+
+/* Reset stacking context issues */
+* {
+  z-index: auto;
+  position: static;
+}
+
+/* Explicitly set modal styles */
+.modal-backdrop {
+  z-index: 9999 !important;
+  position: fixed !important;
+}
+
+.modal-content {
+  z-index: 10000 !important;
+}

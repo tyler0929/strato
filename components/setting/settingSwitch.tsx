@@ -20,7 +20,7 @@ const SettingSwitch: React.FC<SwitchProps> = ({
  
 }) => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center opacity-70">
       <div className="flex items-center gap-2">
         <Text_14_600 text={text} />
         <Tooltip content={tooltipText} position="top" />

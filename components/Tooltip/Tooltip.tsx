@@ -4,10 +4,11 @@ import { TooltipIcon } from "../icons";
 interface TooltipProps {
   content: string;
   position?: "top" | "bottom" | "left" | "right"; // Optional position prop
-  width?:string
+  width?:string,
+  children?:ReactNode
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" }) => {
+const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , children }) => {
   const [calculatedPosition, setCalculatedPosition] = useState("top");
   const [isVisible, setIsVisible] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -76,7 +77,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" }) 
 
       {/* Tooltip Trigger */}
       <div className="hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
-        <TooltipIcon width="15px" />
+        {children || <TooltipIcon width="15px" />}
       </div>
     </div>
   );

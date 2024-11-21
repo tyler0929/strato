@@ -22,9 +22,10 @@ const ConnectWallet = () => {
         title="Connect Wallet"
         isOpen={isOpen}
         onOpen={handleOpenModal}
+        styleHeader="!px-14"
       >
-        <div>
-          <p className="font-[400] font-PLight text-[14px] text-white opacity-65 pt-6 pb-8">
+        <div className="px-7">
+          <p className="font-[400] font-PLight text-[14px] text-white opacity-65 pt-2 pb-5">
             Start by connecting with one of the wallets below. Be sure to store
             your private keys or seed phrase securely. Never share them with
             anyone.
