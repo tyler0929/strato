@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import ModalComponent from "../modal/Modal";
 import Image from "next/image";

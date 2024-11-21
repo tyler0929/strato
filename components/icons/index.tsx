@@ -15,6 +15,9 @@ import TooltipIcon from "./tooltip"
 import CircleArrow from './circleArrow'
 import CopyIcon from "./copy"
 import  MoreIcon from './more'
+import ArrowDown from './arrowDown'
+import ArrowUp from './arrowUp'
+import LinkIcon from './link'
 
 export {
   LanguageIcon,
@@ -33,5 +36,8 @@ export {
   TooltipIcon,
   CircleArrow,
   CopyIcon,
-  MoreIcon
+  MoreIcon,
+  ArrowDown,
+  ArrowUp,
+  LinkIcon
 };
