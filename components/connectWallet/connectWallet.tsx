@@ -51,7 +51,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
         title="Connect Wallet"
         isOpen={isOpen}
         onOpen={handleOpenModal}
-        styleHeader="!px-12"
+        styleHeader="!px-12 !pt-7"
         paddingContent="p-0"
       >
         <div className="">
