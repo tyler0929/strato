@@ -32,7 +32,7 @@ const SideBarSwapPage = () => {
        {item?.Icon}
         <Text_14_600
           text={item?.text}
-          style={`${pathname === "/"+item?.text ? "" : "!font-[400] !font-PLight"}`}
+          style={`${pathname === "/"+item?.text ? "" : "!font-[400] !"}`}
         />
       </Link>)}
     </div>

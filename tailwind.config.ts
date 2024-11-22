@@ -22,14 +22,9 @@ export default {
           gray1:"#cfd1d6"
         }
       },
-      fontFamily:{
-        PExtraBold:"PExtraBold",
-        PBold:"PBold",
-        PSemiBold:"PSemiBold",
-        PMedium:"PMedium",
-        PRegular:"PRegular",
-        PLight:"PLight",
-        PExtraLight:"PExtraLight",
+      fontFamily: {
+        ipa_font:"ipa_font",
+        jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
       },
       boxShadow:{
         shadowsFocus:" 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, .6)"

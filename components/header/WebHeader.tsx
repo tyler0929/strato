@@ -30,7 +30,7 @@ const WebHeader: React.FC = () => {
               <Text_14_600
                 text="Trade"
                 style={`${
-                  pathname === "/Swap" ? "" : "!font-[400] !font-PLight"
+                  pathname === "/Swap" ? "" : "!font-[400] !"
                 }`}
               />
             </Link>
@@ -43,7 +43,7 @@ const WebHeader: React.FC = () => {
               <Text_14_600
                 text="Doc"
                 style={`${
-                  pathname === "/doc" ? "" : "!font-[400] !font-PLight"
+                  pathname === "/doc" ? "" : "!font-[400] !"
                 }`}
               />
             </Link>
@@ -56,7 +56,7 @@ const WebHeader: React.FC = () => {
               <Text_14_600
                 text="Blog"
                 style={`${
-                  pathname === "/blog" ? "" : "!font-[400] !font-PLight"
+                  pathname === "/blog" ? "" : "!font-[400] !"
                 }`}
               />
             </Link>
@@ -69,7 +69,7 @@ const WebHeader: React.FC = () => {
               <Text_14_600
                 text="FAQ"
                 style={`${
-                  pathname === "/FAQ" ? "" : "!font-[400] !font-PLight"
+                  pathname === "/FAQ" ? "" : "!font-[400] !"
                 }`}
               />
             </Link>

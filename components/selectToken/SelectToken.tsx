@@ -80,7 +80,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
         Footer={
           !showManageToken && <button 
           onClick={handleShowManageToken}
-          className="m-auto py-5 font-PBold font-[600] text-[16px] text-primary-main hover:opacity-65 transition-all duration-200 ease-linear">
+          className="m-auto py-5  font-[600] text-[16px] text-primary-main hover:opacity-65 transition-all duration-200 ease-linear">
             Manage Tokens
           </button>
         }
@@ -110,7 +110,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
                   }`}
                 >
                   {item?.iconAddress}
-                  <p className="font-[400] text-[16px] text-white font-PBold">
+                  <p className="font-[400] text-[16px] text-white ">
                     {item?.symbol}
                   </p>
                 </div>
@@ -134,7 +134,7 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
                   <div>{item?.iconAddress}</div>
                   <div className="flex justify-between items-center flex-1 text-white">
                     <div>
-                      <p className="font-[400] text-[16px] text-white font-PBold">
+                      <p className="font-[400] text-[16px] text-white ">
                         {item?.symbol}
                       </p>
                       <p className="text-gray-gray1">{item?.name}</p>

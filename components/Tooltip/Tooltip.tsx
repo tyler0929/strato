@@ -49,7 +49,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , c
       {isVisible && (
         <div
           ref={tooltipRef}
-          className={`absolute z-50 bg-white  text-sm px-7 font-PLight font-[400] text-[16px] leading-6 py-5 rounded-xl shadow-lg transition-opacity ${width} ${
+          className={`absolute z-50 bg-white  text-sm px-7  font-[400] text-[16px] leading-6 py-5 rounded-xl shadow-lg transition-opacity ${width} ${
             activePosition === "top"
               ? "bottom-full mb-2 left-1/2 transform -translate-x-1/2"
               : activePosition === "bottom"

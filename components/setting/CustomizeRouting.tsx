@@ -18,7 +18,7 @@ const CustomizeRouting = () => {
     <div className="flex justify-center items-center w-full h-16">
       <button
         onClick={handleOpenModal}
-        className="font-PBold py-4 font-[600] text-[16px] text-white transition-all duration-200 ease-linear hover:opacity-65"
+        className=" py-4 font-[600] text-[16px] text-white transition-all duration-200 ease-linear hover:opacity-65"
       >
         Customize Routing
       </button>

@@ -14,9 +14,9 @@ const SlippageTolerance = () => {
 
         <input
             placeholder="0"
-            className="bg-black-light2 he-full rounded-lg font-PBold  font-[600] text-[16px]  px-5 py-2 text-gray-gray1   outline-0  w-20 border-none"
+            className="bg-black-light2 he-full rounded-lg   font-[600] text-[16px]  px-5 py-2 text-gray-gray1   outline-0  w-20 border-none"
           />
-          <p className=" font-PBold  font-[600] text-[16px] text-white">%</p>
+          <p className="   font-[600] text-[16px] text-white">%</p>
         </div>
         
     </div>

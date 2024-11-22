@@ -32,7 +32,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
       {baseComponent === "Swap" && (
         <button
           onClick={handleOpenModal}
-          className="bg-primary-main h-12 font-[600] font-PBold text-[16px] hover:opacity-65 text-white rounded-full transition-all duration-200 ease-linear"
+          className="bg-primary-main h-12 font-[600]  text-[16px] hover:opacity-65 text-white rounded-full transition-all duration-200 ease-linear"
         >
           Connect Wallet
         </button>
@@ -55,7 +55,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
         paddingContent="p-0"
       >
         <div className="">
-          <p className="font-[400] font-PLight text-[14px] text-white opacity-65 pt-2 pb-5 px-12">
+          <p className="font-[400]  text-[14px] text-white opacity-65 pt-2 pb-5 px-12">
             Start by connecting with one of the wallets below. Be sure to store
             your private keys or seed phrase securely. Never share them with
             anyone.
@@ -63,49 +63,49 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
           <div className="grid grid-cols-3 gap-y-10 justify-around overflow-y-auto max-h-80 px-12">
             <div className="flex flex-col items-center gap-1 justify-center max-w-24  hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Metamask} alt="Metamask" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Metamask
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Binance} alt="Metamask" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Binance Wallet
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={BinanceW3w} alt="Metamask" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Binance Web3 Wallet
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Coinbase} alt="Metamask" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Coinbase
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Trust} alt="Metamask" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Trust Wallet
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={WalletConnect} alt="WalletConnect" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Wallet Connect
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Opera} alt="Opera" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Opera Wallet
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Brave} alt="Brave" width={55} />
-              <p className="font-[400] text-[12px] text-white font-PLight text-center">
+              <p className="font-[400] text-[12px] text-white  text-center">
                 Brave Wallet
               </p>
             </div>
@@ -117,7 +117,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
                 <div className="w-[55px] h-[55px] bg-[#1e1d20] rounded-xl flex justify-center items-center ">
                   <MoreIcon width="20px" />
                 </div>
-                <p className="font-[400] text-[12px] text-white font-PLight text-center">
+                <p className="font-[400] text-[12px] text-white  text-center">
                   More
                 </p>
               </div>
@@ -125,7 +125,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
             {showMore && (
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={Robby} alt="Robby" width={55} />
-                <p className="font-[400] text-[12px] text-white font-PLight text-center">
+                <p className="font-[400] text-[12px] text-white  text-center">
                   Robby Wallet
                 </p>
               </div>
@@ -133,7 +133,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
             {showMore && (
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={MathWallet} alt="MathWallet" width={55} />
-                <p className="font-[400] text-[12px] text-white font-PLight text-center">
+                <p className="font-[400] text-[12px] text-white  text-center">
                   Math Wallet
                 </p>
               </div>
@@ -141,7 +141,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
             {showMore && (
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={TokenPocket} alt="TokenPocket" width={55} />
-                <p className="font-[400] text-[12px] text-white font-PLight text-center">
+                <p className="font-[400] text-[12px] text-white  text-center">
                   Token Pocket
                 </p>
               </div>
@@ -149,7 +149,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
             {showMore && (
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={TokenPocket} alt="TokenPocket" width={55} />
-                <p className="font-[400] text-[12px] text-white font-PLight text-center">
+                <p className="font-[400] text-[12px] text-white  text-center">
                   Token Pocket
                 </p>
               </div>

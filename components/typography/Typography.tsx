@@ -1,6 +1,6 @@
 const Text_16_600 = ({ text, style }: { text: string; style?: string }) => {
   return (
-    <p className={`${style}  font-[600] text-[16px] text-white`}>
+    <p className={`${style}   font-[600] text-[16px] text-white`}>
       {text}
     </p>
   );
@@ -21,7 +21,7 @@ const Text_20_600 = ({ text, style }: { text: string; style?: string }) => {
 };
 const Text_14_400 = ({ text, style }: { text: string; style?: string }) => {
   return (
-    <p className={`${style}  font-[400] text-[14px] text-white`}>
+    <p className={`${style}  font-[400] text-[14px]  text-white`}>
       {text}
     </p>
   );

@@ -43,7 +43,7 @@ const SettingSwitch: React.FC<SwitchProps> = ({
         {
             isInput && <input
             placeholder="0"
-            className="bg-black-light2 he-full rounded-lg font-PBold  font-[600] text-[16px]  px-3 py-2 text-gray-gray1   outline-0  w-16 border-none"
+            className="bg-black-light2 he-full rounded-lg   font-[600] text-[16px]  px-3 py-2 text-gray-gray1   outline-0  w-16 border-none"
           />
         }
         {
