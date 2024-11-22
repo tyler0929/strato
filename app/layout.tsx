@@ -3,6 +3,7 @@ import "./globals.css";
 import WebHeader from "@/components/header/WebHeader";
 import { SwapProvider } from "@/components/context/SwapContext";
 import localFont from 'next/font/local'
+import FooterComponent from "@/components/footer/footer";
 
 const myFont = localFont({ src: './fonts/PlusJakartaSans-Medium.ttf' })
 export const metadata: Metadata = {
@@ -28,7 +29,9 @@ export default function RootLayout({
           {children}
           </SwapProvider>
           </div>
-        <div className="section-footer"></div>
+        <div className="section-footer max_width_app  px-10">
+          <FooterComponent />
+        </div>
       </body>
     </html>
   );

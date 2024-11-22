@@ -18,6 +18,10 @@ import  MoreIcon from './more'
 import ArrowDown from './arrowDown'
 import ArrowUp from './arrowUp'
 import LinkIcon from './link'
+import InstagramIcon from "./instagram"
+import DiscordIcon from "./discord"
+import TwitterIcon from "./twitter"
+import TelegramIcon from './telegram'
 
 export {
   LanguageIcon,
@@ -39,5 +43,9 @@ export {
   MoreIcon,
   ArrowDown,
   ArrowUp,
-  LinkIcon
+  LinkIcon,
+  InstagramIcon,
+  DiscordIcon,
+  TwitterIcon,
+  TelegramIcon
 };

@@ -13,7 +13,7 @@ const WebHeader: React.FC = () => {
   return (
     <div>
 
-    <header className="header-content top-0 w-full fixed z-[100] ">
+    <header className="header-content top-0 w-full fixed z-[100] bg-black-main ">
       <div className="header-content-mobile"></div>
       <div className="header-content-web max_width_app flex justify-between h-24 items-center px-10 ">
         <div>
