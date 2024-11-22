@@ -33,7 +33,7 @@ const BuyCryptoPage = () => {
             className="outline-none font-[500]  text-white text-[40px] bg-black-main h-12 max-w-44 border-r-2 border-[#262130]"
             placeholder="0.0"
           />
-          <SelectToken baseComponent="inputCurrency" buyCrypto />
+          <SelectToken baseComponent="outputCurrency" buyCrypto />
         </div>
         <div className="my-7">
           <Text_14_400 text="Proceed to get live aggregated quotes from a variety of different fiat onramp providers." />

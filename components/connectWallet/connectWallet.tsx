@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import ModalComponent from "../modal/Modal";
 import Image from "next/image";
@@ -16,25 +16,42 @@ import MathWallet from "@/public/assets/images/wallet/mathwallet.png";
 import TokenPocket from "@/public/assets/images/wallet/tokenpocket.png";
 import { MoreIcon } from "../icons";
 
-const ConnectWallet = () => {
+interface IPropsConnectNetwork {
+  baseComponent?: "Header" | "Swap";
+}
+const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
+  baseComponent = "Swap",
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const handleOpenModal = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="w-full grid">
-      <button
-        onClick={handleOpenModal}
-        className="bg-primary-main h-12 font-[600] font-PBold text-[16px] hover:opacity-65 text-white rounded-full transition-all duration-200 ease-linear"
-      >
-        Connect Wallet
-      </button>
+    <div className={` ${baseComponent === "Header" ? "" :"w-full"} grid`}>
+      {baseComponent === "Swap" && (
+        <button
+          onClick={handleOpenModal}
+          className="bg-primary-main h-12 font-[600] font-PBold text-[16px] hover:opacity-65 text-white rounded-full transition-all duration-200 ease-linear"
+        >
+          Connect Wallet
+        </button>
+      )}
+      {baseComponent === "Header" && (
+        <button  onClick={handleOpenModal} className="rounded-full text-[16px] hidden lg:flex font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
+          Connect Wallet
+        </button>
+      )}
+      {baseComponent === "Header" && (
+        <button  onClick={handleOpenModal} className="rounded-full text-[16px] lg:hidden font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
+          Connect
+        </button>
+      )}
       <ModalComponent
         title="Connect Wallet"
         isOpen={isOpen}
         onOpen={handleOpenModal}
-        styleHeader="!px-14"
+        styleHeader="!px-12"
         paddingContent="p-0"
       >
         <div className="">
@@ -93,8 +110,11 @@ const ConnectWallet = () => {
               </p>
             </div>
             {!showMore && (
-              <div onClick={()=>setShowMore(true)} className="cursor-pointer hover:opacity-65 transition-all duration-200  ease-linear grid justify-center items-center">
-                <div className="w-[50px] h-[50px] bg-[#1e1d20] rounded-xl flex justify-center items-center ">
+              <div
+                onClick={() => setShowMore(true)}
+                className="cursor-pointer flex flex-col max-w-24 hover:opacity-65 transition-all duration-200  ease-linear justify-center items-center"
+              >
+                <div className="w-[55px] h-[55px] bg-[#1e1d20] rounded-xl flex justify-center items-center ">
                   <MoreIcon width="20px" />
                 </div>
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">
@@ -106,7 +126,7 @@ const ConnectWallet = () => {
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={Robby} alt="Robby" width={55} />
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">
-                Robby Wallet
+                  Robby Wallet
                 </p>
               </div>
             )}
@@ -114,7 +134,7 @@ const ConnectWallet = () => {
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={MathWallet} alt="MathWallet" width={55} />
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">
-                Math Wallet
+                  Math Wallet
                 </p>
               </div>
             )}
@@ -122,7 +142,7 @@ const ConnectWallet = () => {
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={TokenPocket} alt="TokenPocket" width={55} />
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">
-                Token Pocket
+                  Token Pocket
                 </p>
               </div>
             )}
@@ -130,7 +150,7 @@ const ConnectWallet = () => {
               <div className="flex flex-col items-center gap-1 justify-center max-w-24 hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
                 <Image src={TokenPocket} alt="TokenPocket" width={55} />
                 <p className="font-[400] text-[12px] text-white font-PLight text-center">
-                Token Pocket
+                  Token Pocket
                 </p>
               </div>
             )}

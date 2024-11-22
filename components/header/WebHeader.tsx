@@ -6,6 +6,7 @@ import React from "react";
 import { LanguageIcon } from "../icons";
 import SettingComponentHeader from "../setting/SettingHeader";
 import SelectNetwork from "./SelectNetwork";
+import ConnectWallet from "../connectWallet/connectWallet";
 
 const WebHeader: React.FC = () => {
   const pathname = usePathname();
@@ -85,9 +86,7 @@ const WebHeader: React.FC = () => {
           <div className="h-full" >
             <SelectNetwork />
           </div>
-          <button className="rounded-full text-[16px] font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
-            Connect Wallet
-          </button>
+          <ConnectWallet baseComponent="Header" />
         </div>
       </div>
     </header>

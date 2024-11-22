@@ -7,19 +7,24 @@ type Network = {
   icon: ReactNode;
   name: string;
   id: string;
+  symbol:string
 };
 const SelectNetwork = () => {
   const [selectedNetwork, setSelectedNetwork] = useState<Network>({
     icon: <Image src={Pol} alt="pol" width={30} />,
     name: "Polygon Testnet",
     id: "1",
+    symbol:"POL"
   });
   return (
     <div className="relative group  h-full flex items-center">
       <div className="flex gap-2 items-center bg-black-light1 px-2 py-2 rounded-full cursor-pointer hover:opacity-65">
         {selectedNetwork?.icon}
-        <p className="font-[600] text-[15px] text-white">
+        <p className="font-[600] text-[15px] text-white hidden lg:flex">
           {selectedNetwork?.name}
+        </p>
+        <p className="font-[600] text-[15px] text-white lg:hidden">
+          {selectedNetwork?.symbol}
         </p>
         <ArrowDown width={25} />
       </div>
@@ -30,7 +35,7 @@ const SelectNetwork = () => {
         <div className="my-2">
           <div className="px-3 hover:bg-black-light2 cursor-pointer flex gap-4 py-3">
             {selectedNetwork?.icon}
-            <p className="font-[600] text-[16px] text-white">
+            <p className="font-[600] text-[16px] text-white ">
               {selectedNetwork?.name}
             </p>
           </div>
