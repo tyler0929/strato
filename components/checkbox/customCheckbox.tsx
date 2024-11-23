@@ -25,7 +25,7 @@ const CustomCheckbox = () => {
         )}
       </div>
       <label className="text-[#cfd1d6]  cursor-pointer text-[14px] font-[400]" onClick={() => setChecked(!checked)}>
-        Tick Checkbox
+      Hide closed positions
       </label>
     </div>
   );
