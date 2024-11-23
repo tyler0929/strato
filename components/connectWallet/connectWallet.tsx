@@ -18,9 +18,11 @@ import { MoreIcon } from "../icons";
 
 interface IPropsConnectNetwork {
   baseComponent?: "Header" | "Swap";
+  style?:string
 }
 const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
   baseComponent = "Swap",
+  style
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
@@ -28,22 +30,22 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
     setIsOpen(!isOpen);
   };
   return (
-    <div className={` ${baseComponent === "Header" ? "" :"w-full"} grid`}>
+    <div className={` ${baseComponent === "Header" ? style :"w-full"} grid`}>
       {baseComponent === "Swap" && (
         <button
           onClick={handleOpenModal}
-          className="bg-primary-main h-12 font-[600]  text-[16px] hover:opacity-65 text-white rounded-full transition-all duration-200 ease-linear"
+          className="bg-primary-main h-12 font-[600]  text-[16px] hover:opacity-65  text-white rounded-full transition-all duration-200 ease-linear"
         >
           Connect Wallet
         </button>
       )}
       {baseComponent === "Header" && (
-        <button  onClick={handleOpenModal} className="rounded-full text-[16px] hidden lg:flex font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
+        <button  onClick={handleOpenModal} className="rounded-full w-full text-[16px] text-center hidden lg:grid font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
           Connect Wallet
         </button>
       )}
       {baseComponent === "Header" && (
-        <button  onClick={handleOpenModal} className="rounded-full text-[16px] lg:hidden font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
+        <button  onClick={handleOpenModal} className="rounded-full text-[16px] lg:hidden text-center font-[600] text-white border hover:opacity-70 transition-all duration-200 ease-linear border-primary-main px-7 py-3">
           Connect
         </button>
       )}

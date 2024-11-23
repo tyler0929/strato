@@ -9,11 +9,13 @@ import ManageToken from "./manateToken";
 interface IPropsSelectToken {
   baseComponent: "inputCurrency" | "outputCurrency" ;
   buyCrypto?:boolean,
+  headerStyle?:string
 
 }
 const SelectToken: React.FC<IPropsSelectToken> = ({
   baseComponent = "inputCurrency",
-  buyCrypto = false
+  buyCrypto = false,
+  headerStyle
 }) => {
   const {
     tokens,
@@ -53,8 +55,10 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
     <div className="flex gap-2 items-center">
       <div
         onClick={handleOpenModal}
-        className="flex w-fit text-white gap-2 h-5 items-center hover:opacity-70 transition-all duration-200 ease-linear cursor-pointer"
+        className={`${headerStyle} flex w-fit text-white gap-2 h-5 items-center hover:opacity-70 transition-all duration-200 ease-linear cursor-pointer`}
       >
+        <div className="flex gap-2 items-center">
+
         {baseComponent === "inputCurrency" && inputCurrency?.iconAddress}
         {baseComponent === "outputCurrency" && outputCurrency?.iconAddress}
         <Text_16_600
@@ -64,7 +68,8 @@ const SelectToken: React.FC<IPropsSelectToken> = ({
               : outputCurrency?.symbol
           }
         />
-        <ArrowSelect width="30px" />
+        </div>
+        <ArrowSelect width="25px" />
       </div>
        { !buyCrypto && <div className="hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
         <CopyIcon width={"15px"}/>

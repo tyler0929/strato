@@ -22,6 +22,11 @@ import InstagramIcon from "./instagram"
 import DiscordIcon from "./discord"
 import TwitterIcon from "./twitter"
 import TelegramIcon from './telegram'
+import AddIcon from './add'
+import ZoomInIcon from "./zoomIn"
+import ZoomOutIcon from "./zoomOut"
+import MinusIcon from "./minus"
+import SwapButton from "./swapButton"
 
 export {
   LanguageIcon,
@@ -47,5 +52,10 @@ export {
   InstagramIcon,
   DiscordIcon,
   TwitterIcon,
-  TelegramIcon
+  TelegramIcon,
+  AddIcon,
+  ZoomInIcon,
+  ZoomOutIcon,
+  MinusIcon,
+  SwapButton
 };

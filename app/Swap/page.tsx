@@ -40,6 +40,7 @@ const SwapPage: React.FC = () => {
               <p className="text-white opacity-65 text-[12px] font-[400]">~1,673.14 USD</p>
             </div>
             <input
+            type="number"
               placeholder="0.0"
               className="bg-black-light2 text-end mb-4 rounded-lg font-[500] !font-ipa_font text-[#f4eeff] text-[40px] h-12 outline-0 w-full border-none"
             />
@@ -59,6 +60,7 @@ const SwapPage: React.FC = () => {
               <p className="text-white opacity-65 text-[12px] font-[400]">~1,673.14 USD</p>
             </div>
             <input
+            type="number"
               placeholder="0.0"
               className="bg-black-light2 !font-ipa_font text-end mb-4 rounded-lg font-[500]  text-[#f4eeff] text-[40px] h-12 outline-0  w-full border-none"
             />

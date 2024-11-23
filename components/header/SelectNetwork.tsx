@@ -18,7 +18,7 @@ const SelectNetwork = () => {
   });
   return (
     <div className="relative group  h-full flex items-center">
-      <div className="flex gap-2 items-center bg-black-light1 px-2 py-2 rounded-full cursor-pointer hover:opacity-65">
+      <div className="flex gap-2 items-center text-white bg-black-light1 px-2 py-2 rounded-full cursor-pointer hover:opacity-65">
         {selectedNetwork?.icon}
         <p className="font-[600] text-[15px] text-white hidden lg:flex">
           {selectedNetwork?.name}

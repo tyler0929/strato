@@ -5,10 +5,11 @@ interface TooltipProps {
   content: string;
   position?: "top" | "bottom" | "left" | "right"; // Optional position prop
   width?:string,
-  children?:ReactNode
+  children?:ReactNode,
+  widthIcon?:string
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , children }) => {
+const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , widthIcon= "15px", children }) => {
   const [calculatedPosition, setCalculatedPosition] = useState("top");
   const [isVisible, setIsVisible] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -49,7 +50,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , c
       {isVisible && (
         <div
           ref={tooltipRef}
-          className={`absolute z-50 bg-white  text-sm px-7  font-[400] text-[16px] leading-6 py-5 rounded-xl shadow-lg transition-opacity ${width} ${
+          className={`absolute z-50 bg-white text-black-light1  text-sm px-7  font-[400] text-[16px] leading-6 py-5 rounded-xl shadow-lg transition-opacity ${width} ${
             activePosition === "top"
               ? "bottom-full mb-2 left-1/2 transform -translate-x-1/2"
               : activePosition === "bottom"
@@ -77,7 +78,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , c
 
       {/* Tooltip Trigger */}
       <div className="hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
-        {children || <TooltipIcon width="15px" />}
+        {children || <TooltipIcon width={widthIcon} />}
       </div>
     </div>
   );
