@@ -2,14 +2,17 @@ import React, { ReactNode, useState, useRef, useEffect } from "react";
 import { TooltipIcon } from "../icons";
 
 interface TooltipProps {
-  content: string;
+  content?: string;
   position?: "top" | "bottom" | "left" | "right"; // Optional position prop
   width?:string,
   children?:ReactNode,
   widthIcon?:string
+  styleContainer?:string,
+  styleArrow?:string,
+  container?:ReactNode
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , widthIcon= "15px", children }) => {
+const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , widthIcon= "15px", children  , styleContainer , styleArrow , container}) => {
   const [calculatedPosition, setCalculatedPosition] = useState("top");
   const [isVisible, setIsVisible] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -52,25 +55,26 @@ const Tooltip: React.FC<TooltipProps> = ({ content, position , width= "w-80" , w
           ref={tooltipRef}
           className={`absolute z-50 bg-white text-black-light1  text-sm px-7  font-[400] text-[16px] leading-6 py-5 rounded-xl shadow-lg transition-opacity ${width} ${
             activePosition === "top"
-              ? "bottom-full mb-2 left-1/2 transform -translate-x-1/2"
+              ? `${styleContainer || "left-1/2 transform -translate-x-1/2" }  bottom-full mb-2 `
               : activePosition === "bottom"
-              ? "top-full mt-2 left-1/2 transform -translate-x-1/2"
+              ? `${styleContainer || "left-1/2 transform -translate-x-1/2"} top-full mt-2 `
               : activePosition === "left"
-              ? "right-full mr-2 top-1/2 transform -translate-y-1/2"
-              : "left-full ml-2 top-1/2 transform -translate-y-1/2"
+              ? `${styleContainer || "top-1/2 transform -translate-y-1/2"} right-full mr-2 `
+              : `${styleContainer || "top-1/2 transform -translate-y-1/2"} left-full ml-2 `
           }`}
         >
           {content}
+          {container}
           {/* Tooltip Arrow */}
           <div
             className={`absolute w-3 h-3 bg-white transform rotate-45 ${
               activePosition === "top"
-                ? "top-full left-1/2 -translate-x-1/2 -translate-y-[6px]"
+                ? `${styleArrow || "left-1/2 -translate-x-1/2 -translate-y-[6px]"} top-full `
                 : activePosition === "bottom"
-                ? "bottom-full left-1/2 -translate-x-1/2 translate-y-[6px]"
+                ? `${styleArrow || "left-1/2 -translate-x-1/2 translate-y-[6px]"} bottom-full `
                 : activePosition === "left"
-                ? "left-full top-1/2 -translate-y-1/2"
-                : "right-full top-1/2 -translate-y-1/2"
+                ? `${styleArrow || "top-1/2 -translate-y-1/2"} left-full `
+                : `${styleArrow || "top-1/2 -translate-y-1/2"} right-full `
             }`}
           ></div>
         </div>

@@ -1,8 +1,13 @@
 "use client"
 import React, { useState } from "react";
 
-const CustomCheckbox = () => {
-    const [checked, setChecked] = useState(false);
+interface IProps {
+    label?:string
+    checked?:boolean,
+    onClick:(checked:boolean) =>void
+}
+const CustomCheckbox:React.FC<IProps> = ({label , checked , onClick}) => {
+
 
   return (
     <div className="flex items-center gap-2">
@@ -10,7 +15,7 @@ const CustomCheckbox = () => {
         className={`w-5 h-5 flex justify-center items-center bg-black-light1 border border-[#524b63] rounded-md cursor-pointer transition-shadow ${
           checked ? "bg-primary-main border-primary-main" : ""
         }`}
-        onClick={() => setChecked(!checked)}
+        onClick={() => onClick(!checked)}
       >
         {checked && (
           <svg
@@ -24,9 +29,9 @@ const CustomCheckbox = () => {
           </svg>
         )}
       </div>
-      <label className="text-[#cfd1d6]  cursor-pointer text-[14px] font-[400]" onClick={() => setChecked(!checked)}>
-      Hide closed positions
-      </label>
+      {label && <label className="text-[#cfd1d6]  cursor-pointer text-[14px] font-[400]" onClick={() => onClick(!checked)}>
+      {label}
+      </label>}
     </div>
   );
 };

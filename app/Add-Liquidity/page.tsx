@@ -7,6 +7,7 @@ import Link from "next/link";
 import ChooseToken from "@/components/liquidity/ChooseToken";
 import SetPriceRange from "@/components/liquidity/SetPriceRange";
 import Tooltip from "@/components/Tooltip/Tooltip";
+import ROICalculatorMain from "@/components/ROICalculator/ROICalculatorMain";
 
 const LiquidityPage: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const LiquidityPage: React.FC = () => {
               <Text_16_400 text="Add Liquidity" />
             </div>
             <div className="flex text-white gap-4 ">
+              <ROICalculatorMain />
               <Tooltip widthIcon="25px" content="Calculated at the current rates with historical trading volume data, and subject to change based on various external variables. This figure is provided for your convenience only, and by no means represents guaranteed returns." />
               <SettingComponent baseComponent="HeaderSetting" />
             </div>

@@ -27,6 +27,10 @@ import ZoomInIcon from "./zoomIn"
 import ZoomOutIcon from "./zoomOut"
 import MinusIcon from "./minus"
 import SwapButton from "./swapButton"
+import CalculatorIcon from "./calculator"
+import WarningIcon from './warning'
+import ComingPriceIcon from "./comeingPrice"
+import CircleCalculateModal from './circleCalulateModal'
 
 export {
   LanguageIcon,
@@ -57,5 +61,9 @@ export {
   ZoomInIcon,
   ZoomOutIcon,
   MinusIcon,
-  SwapButton
+  SwapButton,
+  CalculatorIcon,
+  WarningIcon,
+  ComingPriceIcon,
+  CircleCalculateModal
 };

@@ -28,7 +28,7 @@ const LiquidityPage: React.FC = () => {
                 All
               </button>
             </div>
-            <CustomCheckbox />
+            <CustomCheckbox label="Hide closed positions" onClick={() => {}}/>
           </div>
           <div className="grid mt-20">
             <Link href={"/Add-Liquidity"} className="w-full grid">
