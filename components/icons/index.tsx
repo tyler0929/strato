@@ -31,6 +31,11 @@ import CalculatorIcon from "./calculator"
 import WarningIcon from './warning'
 import ComingPriceIcon from "./comeingPrice"
 import CircleCalculateModal from './circleCalulateModal'
+import PoolsIcon from './poolsIcon'
+import ArrowSwapIcon from './arrowSwap'
+import TickIcon from './tick'
+import BoosterIcon from "./booster" 
+import StableSwapIcon from "./stableSwap" 
 
 export {
   LanguageIcon,
@@ -65,5 +70,10 @@ export {
   CalculatorIcon,
   WarningIcon,
   ComingPriceIcon,
-  CircleCalculateModal
+  CircleCalculateModal,
+  PoolsIcon,
+  ArrowSwapIcon,
+  TickIcon,
+  BoosterIcon,
+  StableSwapIcon
 };

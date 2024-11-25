@@ -2,7 +2,7 @@ import { Text_14_400, Text_14_600 } from "../typography/Typography";
 
 const FooterDetails = () => {
   return (
-    <div className="px-6 py-5">
+    <div className="px-6 pb-5">
       <div className="flex justify-between items-center mt-2">
         <Text_14_400 text="Yield" />
         <Text_14_600 text="$0.00" />

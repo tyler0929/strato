@@ -1,4 +1,7 @@
+import FarmsMainComponent from "@/components/farms/farmsMain";
+import PoolsHeader from "@/components/pools/PoolsHeader";
 import SideBarSwapPage from "@/components/Swap/SideBar";
+import { Text_14_600, Text_20_600 } from "@/components/typography/Typography";
 
 const FarmPage: React.FC = () => {
   return (
@@ -6,8 +9,22 @@ const FarmPage: React.FC = () => {
       <div>
         <SideBarSwapPage />
       </div>
-      <div className="flex-1">
-        Farm page
+       <div className="flex-1">
+        <div className="max-w-[1250px] mx-auto px-5 py-7 rounded-xl bg-black-light1 mt-7">
+          <div>
+          <Text_20_600 text="Farms" style="text-[24px]" />
+          <Text_14_600 text="Stake LP tokens And Earn Token Rewards" style="pt-3"/>
+          </div>
+          <div className="px-10 lg:px-16">
+            <PoolsHeader />
+          </div>
+          <div>
+            <FarmsMainComponent />
+            <FarmsMainComponent />
+            <FarmsMainComponent />
+
+          </div>
+        </div>
       </div>
     </div>
   );

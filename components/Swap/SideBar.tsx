@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Text_14_600 } from "../typography/Typography";
 import { usePathname } from "next/navigation";
-import { LiquidityIcon, SwapIcon } from "../icons";
+import { FarmIcon, LiquidityIcon, PoolsIcon, SwapIcon } from "../icons";
 import { ReactNode } from "react";
  
 export type IPropsSideBar = {
@@ -20,7 +20,15 @@ const SideBarSwapPage = () => {
     {
         Icon:<LiquidityIcon />,
         text:"Liquidity"
-    }
+    },
+    {
+        Icon:<PoolsIcon width="25px" />,
+        text:"Pools"
+    },
+    {
+        Icon:<FarmIcon width="25px" />,
+        text:"Farm"
+    },
 ]
   return (
     <div className=" w-36 pt-6">
