@@ -1,7 +1,7 @@
 "use client";
 import USDT from "@/public/assets/images/usdc.png";
 import Image from "next/image";
-import { Text_12_400, Text_14_600, Text_16_400, Text_16_600 } from "../typography/Typography";
+import { Text_12_400, Text_14_600, Text_16_600 } from "../typography/Typography";
 import { ArrowDown, ArrowUp, DateTimeIcon } from "../icons";
 import { useState } from "react";
 import DetailsPools from "./detailsPools";
@@ -40,7 +40,6 @@ const PoolsMainComponent = () => {
           <div className="hidden md:grid  items-center">
             <Text_12_400 text="APR" style="!text-gray-gray1"/>
             <div className="flex items-center">
-                {/* <Text_16_400 text="0.00%"/> */}
                 <ARPSetting label="0.00%"/>
             </div>
           </div>
