@@ -36,6 +36,7 @@ import ArrowSwapIcon from './arrowSwap'
 import TickIcon from './tick'
 import BoosterIcon from "./booster" 
 import StableSwapIcon from "./stableSwap" 
+import DateTimeIcon from "./dateTime"
 
 export {
   LanguageIcon,
@@ -75,5 +76,6 @@ export {
   ArrowSwapIcon,
   TickIcon,
   BoosterIcon,
-  StableSwapIcon
+  StableSwapIcon,
+  DateTimeIcon
 };

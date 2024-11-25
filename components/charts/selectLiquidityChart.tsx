@@ -67,7 +67,7 @@ const SelectLiquidityChart = () => {
       {/* Full-height Brush above the chart */}
       
       {/* Main Chart */}
-      <div className={`relative w-[${liquidityChartWidth}px] z-0`}>
+      <div className={`relative w-full lg:w-[${liquidityChartWidth}px] z-0`}>
       <div className={`absolute -top-[6px] -left-2 w-full h-[127px] z-50`} onMouseDown={(e) => e.stopPropagation()}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={liquidityData}>

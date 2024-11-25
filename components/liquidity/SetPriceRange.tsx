@@ -85,25 +85,25 @@ const SetPriceRange = () => {
             onClick={handleChangeLiquidity}
             selected={selectedLiquidity}
             text="5%"
-            defaultStyle="!bg-gray-gray2 !px-6  "
+            defaultStyle=" text-[14px] lg:text-[16px] !bg-gray-gray2 !px-3 md:!px-6  "
           />
           <SettingButton
             onClick={handleChangeLiquidity}
             selected={selectedLiquidity}
             text="10%"
-            defaultStyle="!bg-gray-gray2 !px-6  "
+            defaultStyle=" text-[14px] lg:text-[16px] !bg-gray-gray2 !px-3 md:!px-6  "
           />
           <SettingButton
             onClick={handleChangeLiquidity}
             selected={selectedLiquidity}
             text="20%"
-            defaultStyle="!bg-gray-gray2 !px-6"
+            defaultStyle=" text-[14px] lg:text-[16px] !bg-gray-gray2 !px-3 md:!px-6"
           />
           <SettingButton
             onClick={handleChangeLiquidity}
             selected={selectedLiquidity}
             text="Full Range"
-            defaultStyle="!bg-gray-gray2 !px-6 "
+            defaultStyle=" text-[14px] lg:text-[16px] !bg-gray-gray2 !px-3 md:!px-6 "
           />
         </div>
         <div className=" hidden lg:grid">

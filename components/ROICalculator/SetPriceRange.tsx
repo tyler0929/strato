@@ -63,8 +63,7 @@ const SetPriceRangeROI = () => {
     setFullRange(!fullRange)
   }
   return (
-    <div>
-      <div className="flex justify-between items-center"></div>
+    <div className="w-full">
       <div className="flex justify-between items-center py-7 gap-5 ">
         <Text_12_600 text="Set Price Range" style="uppercase" />
         <div className="flex gap-3 pt-4">
@@ -82,7 +81,7 @@ const SetPriceRangeROI = () => {
           </div>
         </div>
       </div>
-      <div className="h-36">
+      <div className="w-full h-36">
         <SelectLiquidityChart />
       </div>
       <div>

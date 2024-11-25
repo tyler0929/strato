@@ -19,7 +19,7 @@ const ROICalculatorMain = () => {
             <DepositAmount />
             <HistoryPrice />
           </div>
-          <div>
+          <div className="w-full">
             <StakedFor />
             <CompoundingEvent />
             <SetPriceRangeROI />

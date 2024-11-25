@@ -34,11 +34,11 @@ const ModalComponent: React.FC<IPropsModal> = ({
     <>
       {isOpen && (
         <div
-          className="fixed modal-backdrop inset-0 z-[999] flex items-center justify-center bg-white bg-opacity-65"
+          className="fixed modal-backdrop inset-0 z-[1999] flex items-center justify-center bg-white bg-opacity-65"
           onClick={onOpen}
         >
           <div
-            className={`modal-content bg-black-light1 rounded-lg shadow-lg max-w-md w-full  animate-fade-in  z-[1000]  ${width}`}
+            className={`modal-content bg-black-light1 rounded-lg shadow-lg max-w-md w-full  animate-fadeIn  z-[10000]  ${width}`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className={`${styleHeader} flex justify-between  p-6 px-7 rounded-t-lg`}>

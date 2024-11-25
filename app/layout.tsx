@@ -22,12 +22,12 @@ export default function RootLayout({
         <div className="section-header">
           <WebHeader />
         </div>
-        <div className="section-content max_width_app pt-24 px-10">
+        <div className="section-content max_width_app pt-24 px-4 md:px-10">
           <SwapProvider>
             <LiquidityProvider>{children}</LiquidityProvider>
           </SwapProvider>
         </div>
-        <div className="section-footer max_width_app  px-10">
+        <div className="section-footer max_width_app px-5 md:px-10">
           <FooterComponent />
         </div>
       </body>

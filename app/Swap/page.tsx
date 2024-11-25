@@ -21,7 +21,7 @@ const SwapPage: React.FC = () => {
   };
   return (
     <div className="section-swap-page max_width_app flex">
-      <div>
+      <div className="hidden lg:flex">
         <SideBarSwapPage />
       </div>
       <div className="flex-1 pt-3">
@@ -42,18 +42,21 @@ const SwapPage: React.FC = () => {
             <input
             type="number"
               placeholder="0.0"
-              className="bg-black-light2 text-end mb-4 rounded-lg font-[500] !font-ipa_font text-[#f4eeff] text-[40px] h-12 outline-0 w-full border-none"
+              className="no-spinner bg-black-light2 text-end mb-4 rounded-lg font-[500] !font-ipa_font text-[#f4eeff] text-[40px] h-12 outline-0 w-full border-none"
             />
           </div>
 
-          <div className="bg-black-light2 px-6 py-4 pt-10 grid mt-4 rounded-lg  relative  z-[0]">
-            <div className="absolute -top-9 grid justify-center w-full left-0 ">
+          <div className="bg-black-light2 px-6 py-4 pt-10 grid mt-4 rounded-lg    z-[0]">
+            <div className="relative">
+
+            <div className="absolute -top-20 grid justify-center w-full left-0 ">
               <div
                 onClick={handleSwapInputOutput}
                 className=" w-fit h-fit z-0  hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear"
               >
                 <SwapCircle width={"65px"} />
               </div>
+            </div>
             </div>
             <SelectToken baseComponent="outputCurrency" />
             <div className="flex justify-end py-5">
@@ -62,7 +65,7 @@ const SwapPage: React.FC = () => {
             <input
             type="number"
               placeholder="0.0"
-              className="bg-black-light2 !font-ipa_font text-end mb-4 rounded-lg font-[500]  text-[#f4eeff] text-[40px] h-12 outline-0  w-full border-none"
+              className="no-spinner bg-black-light2 !font-ipa_font text-end mb-4 rounded-lg font-[500]  text-[#f4eeff] text-[40px] h-12 outline-0  w-full border-none"
             />
           </div>
           <div className="flex justify-end mt-2">

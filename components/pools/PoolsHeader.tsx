@@ -4,13 +4,16 @@ import FilterButton from "./filterButton";
 import SearchInput from "./search";
 import CustomSelectBox from "./selecteBox";
 
+interface IPropsPoolsHeader {
+  baseComponent:"Pools"| "Farms"
+}
 
-const PoolsHeader = () => {
+const PoolsHeader:React.FC<IPropsPoolsHeader> = ({baseComponent}) => {
   return (
     <div className="grid gap-3 lg:flex justify-between items-center pt-7 pb-3">
       <div className=" flex gap-2 items-center">
         <FilterButton />
-        <FarmTypes />
+        {baseComponent ==="Farms" && <FarmTypes />}
         <CustomSwitcher
           positionLabel="End"
           label="Staked only"

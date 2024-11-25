@@ -27,7 +27,7 @@ const LiquidityPage: React.FC = () => {
               </Link>
               <Text_16_400 text="Add Liquidity" />
             </div>
-            <div className="flex text-white gap-4 ">
+            <div className="flex text-white gap-4 items-center">
               <ROICalculatorMain />
               <Tooltip widthIcon="25px" content="Calculated at the current rates with historical trading volume data, and subject to change based on various external variables. This figure is provided for your convenience only, and by no means represents guaranteed returns." />
               <SettingComponent baseComponent="HeaderSetting" />

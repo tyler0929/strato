@@ -39,7 +39,7 @@ const CalculatorModal: React.FC<IPropsModal> = ({ children }) => {
           onClick={handleOpenModal}
         >
           <div
-            className={`modal-content bg-black-light1 rounded-lg shadow-lg  w-[860px]  animate-fade-in  z-[1000] h-[98vh] `}
+            className={`modal-content bg-black-light1 rounded-lg shadow-lg  w-full  lg:w-[860px]  animate-fade-in  z-[1000] h-[98vh] `}
             onClick={(e) => e.stopPropagation()}
           >
             <div

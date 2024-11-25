@@ -26,7 +26,7 @@ const ARPModal: React.FC<IPropsModal> = ({ children , label}) => {
   return (
     <div>
       <button
-        className="hover:opacity-65 transition-all duration-200 ease-linear"
+        className="hover:opacity-65 transition-all duration-200 ease-linear font-[400] text-[16px] text-white flex items-center gap-1"
         onClick={handleOpenModal}
       >
         {label}

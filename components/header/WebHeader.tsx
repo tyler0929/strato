@@ -15,15 +15,15 @@ const WebHeader: React.FC = () => {
 
     <header className="header-content top-0 w-full fixed z-[100] bg-black-main ">
       <div className="header-content-mobile"></div>
-      <div className="header-content-web max_width_app flex justify-between h-24 items-center px-10 ">
-        <div>
+      <div className="header-content-web max_width_app flex justify-between h-24 items-center px-5 md:px-10 ">
+        <div >
           <nav className="text-white flex items-center">
             <Link href={"/Swap"} className="pr-5">
               <p>StratoSwap</p>
             </Link>
             <Link
               href={"/Swap"}
-              className={`h-12 flex justify-center items-center px-4 rounded-lg hover:${
+              className={`hidden lg:flex h-12  justify-center items-center px-4 rounded-lg hover:${
                 pathname === "/Swap" ? "bg-primary-dark" : "bg-black-light1"
               } ${pathname === "/Swap" ? "bg-primary-main" : ""} `}
             >
@@ -36,7 +36,7 @@ const WebHeader: React.FC = () => {
             </Link>
             <Link
               href={"/doc"}
-              className={`h-12 flex justify-center items-center px-4 rounded-lg hover:${
+              className={`hidden lg:flex h-12  justify-center items-center px-4 rounded-lg hover:${
                 pathname === "/doc" ? "bg-primary-dark" : "bg-black-light1"
               } ${pathname === "/doc" ? "bg-primary-main" : ""} `}
             >
@@ -49,7 +49,7 @@ const WebHeader: React.FC = () => {
             </Link>
             <Link
               href={"/blog"}
-              className={`h-12 flex justify-center items-center px-4 rounded-lg hover:${
+              className={`hidden lg:flex h-12  justify-center items-center px-4 rounded-lg hover:${
                 pathname === "/blog" ? "bg-primary-dark" : "bg-black-light1"
               } ${pathname === "/blog" ? "bg-primary-main" : ""} `}
             >
@@ -62,7 +62,7 @@ const WebHeader: React.FC = () => {
             </Link>
             <Link
               href={"/FAQ"}
-              className={`h-12 flex justify-center items-center px-4 rounded-lg hover:${
+              className={`hidden lg:flex h-12  justify-center items-center px-4 rounded-lg hover:${
                 pathname === "/FAQ" ? "bg-primary-dark" : "bg-black-light1"
               } ${pathname === "/FAQ" ? "bg-primary-main" : ""} `}
             >
@@ -76,14 +76,14 @@ const WebHeader: React.FC = () => {
           </nav>
         </div>
         <div className="flex gap-4 items-center h-full">
-          <div className="text-white hover:opacity-70 transition-all duration-200 ease-linear">
+          <div className="hidden lg:flex text-white hover:opacity-70 transition-all duration-200 ease-linear">
             <LanguageIcon />
           </div>
          
-          <div className="text-white z-50 ">
+          <div className="hidden lg:flex text-white z-50 ">
             <SettingComponentHeader  />
           </div>
-          <div className="h-full" >
+          <div className="hidden lg:flex h-full" >
             <SelectNetwork />
           </div>
           <ConnectWallet baseComponent="Header" />

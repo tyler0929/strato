@@ -5,10 +5,13 @@ import ARPModal from "./ARPModal";
 import ROICurrentRatesFarms from "./ROICurrentRatesFarms";
 import StartUsdcLPStaked from "./StartUSDCLPStaked";
 
-const ARPSetting = () => {
+interface IPropsARPSetting {
+  label?:string
+}
+const ARPSetting:React.FC<IPropsARPSetting> = ({label}) => {
   return (
     <div>
-      <ARPModal>
+      <ARPModal label={label}>
       <StartUsdcLPStaked />
         <StakedFor />
         <CompoundingEvent />

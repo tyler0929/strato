@@ -9,7 +9,7 @@ import Link from "next/link";
 const LiquidityPage: React.FC = () => {
   return (
     <div className="section-swap-page max_width_app flex">
-      <div>
+      <div className="hidden lg:flex">
         <SideBarSwapPage />
       </div>
       <div className="flex-1 pt-6 h-[80vh]">

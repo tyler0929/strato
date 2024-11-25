@@ -12,7 +12,7 @@ import ARPSetting from "../farms/ARPSetting";
 
 const DetailsPools = () => {
   return (
-    <div className="bg-[#3a4560] px-5 py-5 rounded-2xl grid lg:grid-cols-2 gap-5">
+    <div className="bg-[#3a4560] px-5 py-5 rounded-2xl grid lg:grid-cols-[30%_65%] gap-5">
       <div className="grid md:grid-cols-2 gap-4 lg:hidden">
         <USDCEarned />
         <div className="border-2 border-[#1f2c4a] px-4 py-4 rounded-2xl">
@@ -23,14 +23,13 @@ const DetailsPools = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center">
-        <div className="flex justify-between items-center lg:hidden">
+        <div className="flex justify-between items-center ">
           <Text_14_400 text="APR:" />
           <div className="flex items-center">
-            <Text_16_400 text="292,656,019.96%" />
-            <ARPSetting />
+            <ARPSetting label="0.00%"/>
           </div>
         </div>
-        <div className="flex justify-between items-center lg:hidden">
+        <div className="flex justify-between items-center ">
           <Text_14_400 text="Ends in:" />
           <Text_14_400 text="2956 days" />
         </div>

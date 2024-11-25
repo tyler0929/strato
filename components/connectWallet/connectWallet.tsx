@@ -62,7 +62,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
             your private keys or seed phrase securely. Never share them with
             anyone.
           </p>
-          <div className="grid grid-cols-3 gap-y-10 justify-around overflow-y-auto max-h-80 px-12">
+          <div className="grid grid-cols-3 gap-y-10 justify-around items-start overflow-y-auto max-h-80 px-12">
             <div className="flex flex-col items-center gap-1 justify-center max-w-24  hover:opacity-65 cursor-pointer transition-all duration-200 ease-linear">
               <Image src={Metamask} alt="Metamask" width={55} />
               <p className="font-[400] text-[12px] text-white  text-center">
@@ -114,7 +114,7 @@ const ConnectWallet: React.FC<IPropsConnectNetwork> = ({
             {!showMore && (
               <div
                 onClick={() => setShowMore(true)}
-                className="cursor-pointer flex flex-col max-w-24 hover:opacity-65 transition-all duration-200  ease-linear justify-center items-center"
+                className="cursor-pointer flex gap-1 flex-col max-w-24 hover:opacity-65 transition-all duration-200  ease-linear justify-center items-center"
               >
                 <div className="w-[55px] h-[55px] bg-[#1e1d20] rounded-xl flex justify-center items-center ">
                   <MoreIcon width="20px" />
