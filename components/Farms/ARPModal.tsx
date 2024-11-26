@@ -88,7 +88,8 @@ const ARPModal: React.FC<IPropsModal> = ({ children , label}) => {
                     onClick={handleShowDetailsFooter}
                     className="text-white flex items-center gap-2 hover:opacity-65 transition-all duration-200 ease-linear"
                   >
-                    Details <ArrowUp width="20px" />
+                    Details <ArrowDown width="20px"/>
+                    
                   </button>
                 )}
                 {footerDetails && (
@@ -96,7 +97,7 @@ const ARPModal: React.FC<IPropsModal> = ({ children , label}) => {
                     onClick={handleShowDetailsFooter}
                     className=" text-white flex items-center gap-2 hover:opacity-65 transition-all duration-200 ease-linear"
                   >
-                    Hide <ArrowDown width="20px"/>
+                    Hide <ArrowUp width="20px" />
                   </button>
                 )}
               </div>

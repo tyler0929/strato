@@ -29,6 +29,10 @@ const SideBarSwapPage:React.FC<{onClick?:()=>void}> = ({onClick}) => {
       Icon: <FarmIcon width="25px" />,
       text: "Farm",
     },
+    {
+      Icon: <FarmIcon width="25px" />,
+      text: "Top Token",
+    },
   ];
   
   return (
@@ -37,7 +41,7 @@ const SideBarSwapPage:React.FC<{onClick?:()=>void}> = ({onClick}) => {
         <Link
         onClick={onClick}
           key={item?.text}
-          href={`/${item?.text}`}
+          href={`/${item?.text?.replace(" ", "") }`}
           className={`h-10 flex justify-start text-white gap-3 items-center transition-all duration-200 ease-linear px-4 rounded-lg hover:bg-black-light1 ${
             pathname === "/" + item?.text ? "bg-primary-main" : ""
           } `}
@@ -45,7 +49,7 @@ const SideBarSwapPage:React.FC<{onClick?:()=>void}> = ({onClick}) => {
           {item?.Icon}
           <Text_14_600
             text={item?.text}
-            style={`${pathname === "/" + item?.text ? "" : "!font-[400] !"}`}
+            style={`${pathname === "/" + item?.text?.replace(" ","") ? "" : "!font-[400] !"}`}
           />
         </Link>
       ))}

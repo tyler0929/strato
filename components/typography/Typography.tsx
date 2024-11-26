@@ -19,6 +19,13 @@ const Text_20_600 = ({ text, style }: { text: string; style?: string }) => {
     </p>
   );
 };
+const Text_24_600 = ({ text, style }: { text: string; style?: string }) => {
+  return (
+    <p className={`${style}  font-[600] text-[24px] text-[#f4eeff]`}>
+      {text}
+    </p>
+  );
+};
 const Text_12_600 = ({ text, style }: { text: string; style?: string }) => {
   return (
     <p className={`${style}  font-[600] text-[12px] text-white`}>
@@ -50,4 +57,4 @@ const Text_16_400 = ({ text, style }: { text: string; style?: string }) => {
 
 
 
-export { Text_14_600 , Text_20_600 , Text_14_400 , Text_16_600 , Text_16_400 , Text_12_600 , Text_12_400};
+export { Text_14_600 , Text_20_600 , Text_14_400 , Text_16_600 , Text_16_400 , Text_12_600 , Text_12_400 , Text_24_600};
