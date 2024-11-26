@@ -1,4 +1,5 @@
-import FarmsMainComponent from  "@/components/Farms/farmsMain";
+
+import FarmsMainComponent from "@/components/Farms/farmsMain";
 import PoolsHeader from "@/components/pools/PoolsHeader";
 import SideBarSwapPage from "@/components/Swap/SideBar";
 import { Text_14_600, Text_20_600 } from "@/components/typography/Typography";
