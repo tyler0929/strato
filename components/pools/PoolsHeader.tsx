@@ -8,6 +8,7 @@ interface IPropsPoolsHeader {
   baseComponent:"Pools"| "Farms"
 }
 
+
 const PoolsHeader:React.FC<IPropsPoolsHeader> = ({baseComponent}) => {
   return (
     <div className="grid gap-3 lg:flex justify-between items-center pt-7 pb-3">

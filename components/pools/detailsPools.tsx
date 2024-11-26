@@ -3,7 +3,6 @@ import { LinkIcon } from "../icons";
 import {
   Text_12_600,
   Text_14_400,
-  Text_16_400,
   Text_16_600,
 } from "../typography/Typography";
 import USDCEarned from "./USDCEarned";
