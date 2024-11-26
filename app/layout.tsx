@@ -5,6 +5,7 @@ import { SwapProvider } from "@/components/context/SwapContext";
 import FooterComponent from "@/components/footer/footer";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { LiquidityProvider } from "@/components/context/LiquidityContext";
+import BottomNavigation from "@/components/header/bottomNavigation";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -29,6 +30,9 @@ export default function RootLayout({
         </div>
         <div className="section-footer max_width_app px-5 md:px-10">
           <FooterComponent />
+        </div>
+        <div className="lg:hidden">
+        <BottomNavigation />
         </div>
       </body>
     </html>

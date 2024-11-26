@@ -1,8 +1,7 @@
 "use client";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
-  ArrowLeftIcon,
   ArrowUp,
   CalculatorIcon,
   CloseIcon,
@@ -17,12 +16,27 @@ const ARPModal: React.FC<IPropsModal> = ({ children , label}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [footerDetails, setFooterDetails] = useState(false);
 
+  const [contentHeight, setContentHeight] = useState("0px");
+  const modalRef = useRef<HTMLDivElement | null>(null);
+  const footerRef = useRef<HTMLDivElement | null>(null);
+
   const handleOpenModal = () => {
     setIsOpen(!isOpen);
   };
   const handleShowDetailsFooter = () => {
     setFooterDetails(!footerDetails);
   };
+
+  useEffect(() => {
+    if (modalRef.current && footerRef.current) {
+      // Calculate available height for content
+      const modalHeight = modalRef.current.offsetHeight;
+      const footerHeight = footerRef.current.offsetHeight;
+      const availableHeight = modalHeight - footerHeight - 64; // Subtract footer height and padding
+      setContentHeight(`${availableHeight}px`);
+    }
+  }, [footerDetails, isOpen]);
+
   return (
     <div>
       <button
@@ -40,6 +54,7 @@ const ARPModal: React.FC<IPropsModal> = ({ children , label}) => {
           <div
             className={`modal-content bg-black-light1 rounded-lg shadow-lg  w-[460px]  animate-fade-in  z-[1000] h-[90vh] `}
             onClick={(e) => e.stopPropagation()}
+            ref={modalRef}
           >
             <div
               className={` flex justify-between  p-6 px-7 rounded-t-lg h-[8vh]`}
@@ -55,16 +70,16 @@ const ARPModal: React.FC<IPropsModal> = ({ children , label}) => {
               </div>
             </div>
             <div
-              className={` ${
-                footerDetails ? "h-[47vh]" : "h-[76vh]"
-              } overflow-y-auto`}
+              className={`overflow-y-auto`}
+              style={{ height: contentHeight }}
             >
-              <div className="h-[100vh] py-3 px-5">{children}</div>
+              <div className="h-[70vh] py-3 px-5">{children}</div>
             </div>
 
             <div
+            ref={footerRef}
               className={`grid rounded-2xl ${
-                footerDetails ? "h-[43vh]" : "h-[8vh]"
+                footerDetails ? "h-fit bottom-0" : "h-[8vh]"
               }  bg-black-main`}
             >
               <div className="flex justify-center h-16 items-center">

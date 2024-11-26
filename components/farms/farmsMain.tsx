@@ -40,7 +40,7 @@ const FarmsMainComponent = () => {
         </div>
       </div>
       <div
-        className="flex justify-between items-center bg-black-light2 px-7 py-5 rounded-2xl cursor-pointer"
+        className="flex justify-between items-center bg-black-light2 px-7 py-4 rounded-2xl cursor-pointer"
         onClick={handleShowDetailsFunction}
       >
         <div className="flex gap-8 lg:gap-10 xl:gap-12 items-start">
@@ -66,8 +66,7 @@ const FarmsMainComponent = () => {
           <div className="grid  items-center">
             <Text_12_400 text="APR" style="!text-gray-gray1"/>
             <div className="flex items-center">
-              <Text_16_400 text="292,656,019.96%" />
-              <ARPSetting />
+              <ARPSetting label="0.00%"/>
             </div>
           </div>
           <div className="hidden lg:grid">

@@ -5,7 +5,7 @@ import { Text_12_400, Text_14_600, Text_16_600 } from "../typography/Typography"
 import { ArrowDown, ArrowUp, DateTimeIcon } from "../icons";
 import { useState } from "react";
 import DetailsPools from "./detailsPools";
-import ARPSetting from "../farms/ARPSetting";
+import ARPSetting from "../Farms/ARPSetting";
 import Tooltip from "../Tooltip/Tooltip";
 
 const PoolsMainComponent = () => {
@@ -17,7 +17,7 @@ const PoolsMainComponent = () => {
   return (
     <div className="my-2">
       <div
-        className="flex justify-between items-center bg-black-light2 px-7 py-5 rounded-2xl cursor-pointer"
+        className="flex justify-between items-center bg-black-light2 px-7 py-3 rounded-2xl cursor-pointer"
         onClick={handleShowDetailsFunction}
       >
         <div className="flex gap-10 lg:gap-14 xl:gap-20 items-start">

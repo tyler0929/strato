@@ -7,6 +7,7 @@ import { LanguageIcon } from "../icons";
 import SettingComponentHeader from "../setting/SettingHeader";
 import SelectNetwork from "./SelectNetwork";
 import ConnectWallet from "../connectWallet/connectWallet";
+import SidebarDrawer from "../SidebarDrawer/SidebarDrawer";
 
 const WebHeader: React.FC = () => {
   const pathname = usePathname();
@@ -87,6 +88,9 @@ const WebHeader: React.FC = () => {
             <SelectNetwork />
           </div>
           <ConnectWallet baseComponent="Header" />
+          <div className="flex lg:hidden ">
+            <SidebarDrawer />
+          </div>
         </div>
       </div>
     </header>

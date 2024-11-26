@@ -30,8 +30,21 @@ export default {
       boxShadow:{
         shadowsFocus:" 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, .6)"
       },
+
+      keyframes: {
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideOutLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      }, 
       animation: {
         fadeIn: 'fadeIn 0.99s ease-in-out',
+        slideInLeft: "slideInLeft 0.3s ease-out",
+        slideOutLeft: "slideOutLeft 0.3s ease-in",
       },
     },
   },

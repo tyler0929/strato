@@ -8,7 +8,7 @@ import {
 } from "../typography/Typography";
 import USDCEarned from "./USDCEarned";
 import ConnectWallet from "../connectWallet/connectWallet";
-import ARPSetting from "../farms/ARPSetting";
+import ARPSetting from "../Farms/ARPSetting";
 
 const DetailsPools = () => {
   return (
