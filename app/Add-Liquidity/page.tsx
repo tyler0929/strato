@@ -2,7 +2,7 @@
 import { ArrowLeftIcon } from "@/components/icons";
 import SettingComponent from "@/components/setting/setting";
 import SideBarSwapPage from "@/components/Swap/SideBar";
-import { Text_16_400 } from "@/components/typography/Typography";
+import { Text_12_400, Text_16_400 } from "@/components/typography/Typography";
 import Link from "next/link";
 import ChooseToken from "@/components/liquidity/ChooseToken";
 import SetPriceRange from "@/components/liquidity/SetPriceRange";
@@ -27,10 +27,14 @@ const LiquidityPage: React.FC = () => {
               </Link>
               <Text_16_400 text="Add Liquidity" />
             </div>
-            <div className="flex text-white gap-4 items-center">
-              <ROICalculatorMain />
+            <div className="grid text-white items-center">
+              <Text_12_400 text="APR"/>
+              <div className="flex text-white gap-2 items-center">
+
+              <ROICalculatorMain  label="0.0%"/>
               <Tooltip widthIcon="25px" content="Calculated at the current rates with historical trading volume data, and subject to change based on various external variables. This figure is provided for your convenience only, and by no means represents guaranteed returns." />
               <SettingComponent baseComponent="HeaderSetting" />
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pt-8">

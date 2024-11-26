@@ -10,12 +10,15 @@ import {
 import Warning from "./warning";
 import DepositAmount from "./DepositAmount";
 import FooterDetails from "./footerDetails";
+import { Text_14_400 } from "../typography/Typography";
 
 interface IPropsModal {
   children: ReactNode;
+  label?:string
 }
 
-const CalculatorModal: React.FC<IPropsModal> = ({ children }) => {
+
+const CalculatorModal: React.FC<IPropsModal> = ({ children , label}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [footerDetails, setFooterDetails] = useState(false);
 
@@ -28,10 +31,11 @@ const CalculatorModal: React.FC<IPropsModal> = ({ children }) => {
   return (
     <div>
       <button
-        className="hover:opacity-65 transition-all duration-200 ease-linear"
+        className="hover:opacity-65 transition-all duration-200 ease-linear flex items-center gap-1"
         onClick={handleOpenModal}
       >
-        <CalculatorIcon width="30px" />
+        {label && <Text_14_400 text={label} style="!text-gray-gray1"/>}
+        <CalculatorIcon width="27px" />
       </button>
       {isOpen && (
         <div

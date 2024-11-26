@@ -44,7 +44,7 @@ const PoolsMainComponent = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-16 items-start">
+        <div className="flex gap-16 items-center">
           <div className=" gap-0  items-start justify-start hidden lg:grid">
             <Text_12_400 text="Ends in" />
             <div className="flex gap-1">
@@ -55,7 +55,7 @@ const PoolsMainComponent = () => {
             </div>} ><DateTimeIcon /></Tooltip>
             </div>
           </div>
-          <div className="flex items-center justify-end  md:min-w-20">
+          <div className="flex items-center justify-end  md:min-w-20 ">
             {!showDetails && (
               <button
                 onClick={handleShowDetailsFunction}

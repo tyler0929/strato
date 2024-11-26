@@ -9,10 +9,13 @@ import SetPriceRangeROI from "./SetPriceRange";
 import StakedFor from "./Stakedfor";
 import Warning from "./warning";
 
-const ROICalculatorMain = () => {
+interface IPropsROI {
+  label?:string
+}
+const ROICalculatorMain:React.FC<IPropsROI> = ({label}) => {
   return (
     <div>
-      <CalculatorModal>
+      <CalculatorModal label={label}>
         <Warning text="We are in the early stage of V3 deployment. Due to a lack of historical data, numbers and estimates may be inaccurate." />
         <div className="grid lg:grid-cols-2 gap-4">
           <div>

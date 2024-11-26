@@ -129,7 +129,7 @@ const FarmsMainComponent = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-10 items-start">
+        <div className="flex gap-10 items-center">
           <div className=" gap-0 items-start justify-start hidden xl:grid">
             <Text_12_400 text="Available" style="!text-gray-gray1"/>
             <Text_12_400 text="0LP" style="!text-[#666171]" />
