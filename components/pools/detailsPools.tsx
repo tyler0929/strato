@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { LinkIcon } from "../icons";
+import { DateTimeIcon, LinkIcon } from "../icons";
 import {
   Text_12_600,
   Text_14_400,
+  Text_14_600,
   Text_16_600,
 } from "../typography/Typography";
 import USDCEarned from "./USDCEarned";
 import ConnectWallet from "../connectWallet/connectWallet";
 import ARPSetting from "../Farms/ARPSetting";
+import Tooltip from "../Tooltip/Tooltip";
 
 const DetailsPools = () => {
   return (
@@ -30,7 +32,14 @@ const DetailsPools = () => {
         </div>
         <div className="flex justify-between items-center ">
           <Text_14_400 text="Ends in:" />
+          <div className="flex gap-1">
           <Text_14_400 text="2956 days" />
+          <Tooltip width="w-60" container={<div>
+              <Text_16_600 text="End Time:" style="!text-black-main"/>
+              <Text_14_600 text="Dec 29, 2032, 10:27 PM" style="!text-black-light2"/>
+            </div>} ><DateTimeIcon /></Tooltip>
+
+          </div>
         </div>
         <div className="flex items-center gap-1">
           <Link href={"#"}>
