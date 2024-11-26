@@ -1,5 +1,5 @@
 import CustomSwitcher from "../checkbox/CustomSwitcher";
-import FarmTypes from "../Farms/FarmTypes";
+import FarmTypes from  "../Farms/FarmTypes";
 import FilterButton from "./filterButton";
 import SearchInput from "./search";
 import CustomSelectBox from "./selecteBox";
