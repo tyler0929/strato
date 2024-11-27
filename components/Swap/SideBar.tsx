@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Text_14_600 } from "../typography/Typography";
 import { usePathname } from "next/navigation";
-import { FarmIcon, LiquidityIcon, PoolsIcon, SwapIcon } from "../icons";
+import { FarmIcon, InfoIcon, LiquidityIcon, PoolsIcon, SwapIcon } from "../icons";
 import { ReactNode } from "react";
 
 export type IPropsSideBar = {
@@ -30,11 +30,11 @@ const SideBarSwapPage:React.FC<{onClick?:()=>void}> = ({onClick}) => {
       text: "Farm",
     },
     {
-      Icon: <FarmIcon width="25px" />,
+      Icon: <InfoIcon width="25px" />,
       text: "Top Token",
     },
   ];
-  
+
   return (
     <div className=" w-36 pt-6">
       {sidebarData?.map((item) => (
@@ -43,13 +43,13 @@ const SideBarSwapPage:React.FC<{onClick?:()=>void}> = ({onClick}) => {
           key={item?.text}
           href={`/${item?.text?.replace(" ", "") }`}
           className={`h-10 flex justify-start text-white gap-3 items-center transition-all duration-200 ease-linear px-4 rounded-lg hover:bg-black-light1 ${
-            pathname === "/" + item?.text ? "bg-primary-main" : ""
+            pathname === "/" + item?.text?.replace(" ","") ? "bg-primary-main" : ""
           } `}
         >
           {item?.Icon}
           <Text_14_600
             text={item?.text}
-            style={`${pathname === "/" + item?.text?.replace(" ","") ? "" : "!font-[400] !"}`}
+            style={`${pathname === ("/" + item?.text?.replace(" ","")) ? "" : "!font-[400] !"}`}
           />
         </Link>
       ))}

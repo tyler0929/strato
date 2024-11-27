@@ -15,7 +15,7 @@ const PoolsPage: React.FC = () => {
           <Text_20_600 text="Pools" style="text-[24px]" />
           <Text_14_600 text="Earn Yield On Trading Fees By Providing Liquidity" style="pt-3"/>
           </div>
-          <div className="px-10 lg:px-16">
+          <div className=" px-5 lg:px-16">
             <PoolsHeader baseComponent="Pools"/>
           </div>
           <div>

@@ -12,7 +12,7 @@ interface IPropsPoolsHeader {
 const PoolsHeader:React.FC<IPropsPoolsHeader> = ({baseComponent}) => {
   return (
     <div className="grid gap-3 lg:flex justify-between items-center pt-7 pb-3">
-      <div className=" flex gap-2 items-center">
+      <div className=" flex flex-wrap gap-2 items-center">
         <FilterButton />
         {baseComponent ==="Farms" && <FarmTypes />}
         <CustomSwitcher
@@ -23,7 +23,7 @@ const PoolsHeader:React.FC<IPropsPoolsHeader> = ({baseComponent}) => {
           labelStyle="!text-[#FFF]"
         />
       </div>
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center flex-wrap">
         <CustomSelectBox />
         <SearchInput />
       </div>

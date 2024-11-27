@@ -2,14 +2,14 @@ import SideBarSwapPage from "@/components/Swap/SideBar";
 import AnalyticsComponent from "@/components/TopToken/Analytics";
 import TopPairs from "@/components/TopToken/TopPairs";
 import TopTokenHeader from "@/components/TopToken/TopTokenHeader";
-import TopTokensComponent from "@/components/TopToken/TopTokens";
 import Transactions from "@/components/TopToken/Transactions";
+import YourWatchlist from "@/components/TopToken/YourWatchlist";
 
 
 const TopTokenPage: React.FC = () => {
   return (
     <div className="section-swap-page max_width_app flex">
-      <div className="hidden lg:flex">
+      <div>
         <SideBarSwapPage />
       </div>
       <div className="flex-1">
@@ -17,10 +17,8 @@ const TopTokenPage: React.FC = () => {
         <div className="section-header">
           <TopTokenHeader />
         </div>
-         <AnalyticsComponent />
-         <TopTokensComponent />
+        <YourWatchlist text="Saved pairs will appear here" />
          <TopPairs />
-         <Transactions />
         </div>
       </div>
     </div>

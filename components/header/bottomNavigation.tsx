@@ -5,6 +5,7 @@ import {
   LiquidityIcon,
   PoolsIcon,
   FarmIcon,
+  InfoIcon,
 } from "@/components/icons";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -17,6 +18,7 @@ const BottomNavigation: React.FC = () => {
     { id: 1, name: "Liquidity", icon: <LiquidityIcon /> },
     { id: 2, name: "Pools", icon: <PoolsIcon width="20px" /> },
     { id: 3, name: "Farm", icon: <FarmIcon /> },
+    { id: 4, name: "Top Token", icon: <InfoIcon /> },
   ];
 
   return (
@@ -25,14 +27,14 @@ const BottomNavigation: React.FC = () => {
         {navItems.map((item: any) => (
           <Link
             key={item.id}
-            href={item.name === "Trade" ? "/Swap" : "/"+item?.name}
+            href={item.name === "Trade" ? "/Swap" : "/"+item?.name?.replace(" " , "")}
             className="flex flex-col flex-1 items-center"
           >
             <button
               key={item.id}
               onClick={() => setActive(item.id)}
               className={`flex flex-col flex-1 items-center  hover:text-primary-main ${
-                pathname === "/" + item.name
+                pathname === "/" + item.name?.replace(" " , "")
                   ? "text-primary-main"
                   : "text-gray-gray1"
               }`}

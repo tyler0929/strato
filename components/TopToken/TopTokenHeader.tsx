@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import SearchTokens from "./SearchToken";
+
 
 const TopTokenHeader = () => {
   const pathname = usePathname();
@@ -17,10 +16,10 @@ const TopTokenHeader = () => {
             Overview
           </button>
         </Link>
-        <Link href={"/TopToke/Pairs"}>
+        <Link href={"/TopToken/Pairs"}>
           <button
             id="Pairs"
-            className={` ${pathname === "/TopToke/Pairs" ? "bg-primary-main" : ""} rounded-lg font-[600] text-[16px] text-white hover:opacity-65 transition-all duration-200 ease-linear px-4 py-1`}
+            className={` ${pathname === "/TopToken/Pairs" ? "bg-primary-main" : ""} rounded-lg font-[600] text-[16px] text-white hover:opacity-65 transition-all duration-200 ease-linear px-4 py-1`}
           >
             Pairs
           </button>
@@ -35,7 +34,7 @@ const TopTokenHeader = () => {
         </Link>
       </div>
       <div>
-        <SearchTokens />
+        {/* <TopTokenSearch /> */}
       </div>
     </div>
   );

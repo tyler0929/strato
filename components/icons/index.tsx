@@ -38,6 +38,9 @@ import BoosterIcon from "./booster"
 import StableSwapIcon from "./stableSwap" 
 import DateTimeIcon from "./dateTime"
 import TradeIcon from "./trade"
+import ArrowTableLeft from "./arrowTableLeft"
+import ArrowTableRight from "./arrowTableRight"
+import InfoIcon from "./infoIcon"
 
 export {
   LanguageIcon,
@@ -79,5 +82,8 @@ export {
   BoosterIcon,
   StableSwapIcon,
   DateTimeIcon,
-  TradeIcon
+  TradeIcon,
+  ArrowTableRight,
+  ArrowTableLeft,
+  InfoIcon
 };

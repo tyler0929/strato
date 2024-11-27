@@ -1,41 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
+import { Text_14_600 } from "../typography/Typography";
 
 const data = [
   {
     name: "4:30 am",
     pv: 20,
     amt: 240,
+    date:"Nov 21, 2024, 12:00 AM (UTC)"
   },
   {
     name: "4:30 am",
     pv: 20,
     amt: 22,
+    date:"Nov 16, 2024, 12:00 AM (UTC)"
   },
   {
     name: "4:30 am",
     pv: 20,
     amt: 22,
+    date:"Nov 10, 2024, 12:00 AM (UTC)"
   },
   {
     name: "4:30 am",
     pv: 100,
     amt: 100,
+    date:"Nov 4, 2024, 12:00 AM (UTC)"
   },
   {
     name: "4:30 am",
     pv: 10,
     amt: 100,
+    date:"Nov 1, 2024, 12:00 AM (UTC)"
   },
 ];
 
 const AnalyticsAreaCharts = () => {
     // Custom Tooltip Renderer
+    const [dateValue , setDateValue] = useState("Nov 1, 2024, 12:00 AM (UTC)")
     const CustomTooltip = ({ active, payload }:any) => {
+        if (payload?.[0]?.payload?.date){
+            setDateValue(payload?.[0]?.payload?.date)
+        }
         if (active && payload && payload.length) {
           return (
             <div
               style={{
+                display:"none",
                 position: "absolute",
                 top: 0,
                 left: "10%",
@@ -54,6 +65,9 @@ const AnalyticsAreaCharts = () => {
         return null;
       }
   return (
+    <div className="h-full ">
+        <Text_14_600 text={dateValue} />
+        <div className="h-60">
     <ResponsiveContainer width="100%" height="100%" style={{position:"relative"}}>
       <AreaChart
         data={data}
@@ -91,6 +105,10 @@ const AnalyticsAreaCharts = () => {
         />
       </AreaChart>
     </ResponsiveContainer>
+
+        </div>
+
+    </div>
   );
 };
 export default AnalyticsAreaCharts;
